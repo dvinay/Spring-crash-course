@@ -14,8 +14,8 @@ public class App
 		
 		CarDealer carDealer = (CarDealer)ctx.getBean("carDealer");
 		
-		System.out.println("University Name: "+carDealer.getName());
-		System.out.println("University Departments: "+carDealer.getModles());
+		System.out.println("CarDealer Name: "+carDealer.getName());
+		System.out.println("CarDealer Models: "+carDealer.getModles());
 		System.out.println("Deafult set type: "+carDealer.getModles().getClass().getName());		
 	}
 }
