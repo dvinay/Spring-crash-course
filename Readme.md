@@ -38,7 +38,6 @@
 	<properties>
         <springframework.version>4.3.6.RELEASE</springframework.version>
     </properties>
- 
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
