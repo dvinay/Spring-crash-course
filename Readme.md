@@ -150,6 +150,7 @@
 	```
 
 - for ref beans also we can use 3 types of syntax
+		
 		1) ref as property value
 
 		```xml
@@ -195,7 +196,14 @@
 	```xml
 		<bean name="item" class="com.fuppino.spring.lc.xmlconfig.Item" p:id="23" init-method="init" destroy-method="destroy"/>
 	```
+	[ref](https://github.com/dvinay/Spring-crash-course/commit/ae2d8ca26467240d9e27eb99c04f251c267fafa8)
+
 	2) implementing interfaces
+		- POJO class must implements InitializingBean and DisposableBean
+		- it needs to override afterPropertiesSet(), destroy()
+		- no need to specify init-method and destroy-method attributes
+		- make sure you have called registerShutdownHook() method, which is available in AbstractApplicationContext class
+
 	3) Annotation
 
 

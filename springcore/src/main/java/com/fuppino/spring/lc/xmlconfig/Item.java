@@ -14,7 +14,7 @@ public class Item {
 	}
 
 	public void init() {//function name is not mandatory
-		System.out.println("inside - init method");
+		System.out.println("inside - Item init method");
 	}
 	
 	public int getId() {
@@ -22,12 +22,12 @@ public class Item {
 	}
 
 	public void setId(int id) {
-		System.out.println("inside - setId method");
+		System.out.println("inside - Item setId method");
 		this.id = id;
 	}
 
 	public void destroy() {//function name is not mandatory
-		System.out.println("inside - destroy method");
+		System.out.println("inside - Item destroy method");
 	}
 	
 	@Override

@@ -80,4 +80,7 @@
 	</bean>
 	
 	<bean name="item" class="com.fuppino.spring.lc.xmlconfig.Item" p:id="23" init-method="init" destroy-method="destroy"/>
+	
+	<bean name="data" class="com.fuppino.spring.lc.interfaces.Data" p:id="23"/>
+	
 </beans>
