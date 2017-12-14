@@ -18,4 +18,9 @@
 	</bean>
 	
 	<bean name="item" class="com.fuppino.spring.prototype.Item" p:id="23" p:name="data" scope="prototype"/>
+	
+	<bean name="data" class="com.fuppino.spring.constructor.Data">
+		<constructor-arg name="id" value="23"/>
+		<constructor-arg name="name" value="Sample"/>
+	</bean>
 </beans>

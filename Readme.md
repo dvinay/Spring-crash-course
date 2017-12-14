@@ -261,7 +261,16 @@ e.g:
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/2d3d4ce9707c9d1bb73144c043dc771caa8f2977)
 
+### Spring bean creation using constructor-arg ###
 
+- constructor-arg tag to initialize data
+- spring is able to call the private constructor
 
+```xml
+<bean name="data" class="com.fuppino.spring.constructor.Data">
+	<constructor-arg name="id" value="23"/>
+	<constructor-arg name="name" value="Sample"/>
+</bean>
+```
 
 
