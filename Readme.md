@@ -240,6 +240,6 @@ e.g:
 		<property name="address">
 			<bean class="com.fuppino.spring.innerbean.Address" p:cityName="Fremont"/>
 		</property>
-	</bean>
+</bean>
 ```
-
+[ref](https://github.com/dvinay/Spring-crash-course/commit/6470843f274fb07ccbbf5b5eaf3796f83fe1259c)
