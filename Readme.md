@@ -243,3 +243,18 @@ e.g:
 </bean>
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/6470843f274fb07ccbbf5b5eaf3796f83fe1259c)
+
+### Spring bean scope ###
+
+- singleton => one object will create, this is default scope for bean
+- prototype => each call gets new object
+- request => one object per request
+- session => one object per session
+- global session => complete application get one object based on session
+
+
+
+
+
+
+
