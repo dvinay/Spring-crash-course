@@ -83,4 +83,7 @@
 	
 	<bean name="data" class="com.fuppino.spring.lc.interfaces.Data" p:id="23"/>
 	
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+	<bean name="annotationBean" class="com.fuppino.spring.lc.annotations.AnnotationBean" p:id="23"/>
+	
 </beans>
