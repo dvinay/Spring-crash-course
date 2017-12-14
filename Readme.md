@@ -223,4 +223,11 @@
 		```
 		[ref](https://github.com/dvinay/Spring-crash-course/commit/db20a49b702fb924bfc64376599c09adb2c0569a)
 
+### Spring dependency check ###
+
+- spring checks the dependency, while creating a bean in container
+- to check the dependency, need to add @Required before set method
+- [ref]
+
+
 
