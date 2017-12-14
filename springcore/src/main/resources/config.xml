@@ -61,4 +61,15 @@
 			</map>
 		</property>
 	</bean>
+	
+	<!-- Properties data -->
+	<bean name="languageAndCountry" class="com.fuppino.spring.prop.LanguageAndCountry">
+		<property name="data">
+			<props>
+				<prop key="USA">English</prop>
+				<prop key="INDIA">HINDI</prop>
+			</props>
+		</property>
+	</bean>
+	
 </beans>

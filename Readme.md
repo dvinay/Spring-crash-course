@@ -105,17 +105,18 @@
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/016fb75683c0438462e9d8192cf4f5834b6ae723)
 	
 	3) Map (Key, value)
-		
-	4) Properties
+		default set type is LinkedHashMap
+		if set contains only one element, set tag will be optional
+	[ref](https://github.com/dvinay/Spring-crash-course/commit/c19c325a4ad5b57dbd855edbfd94d7468fdabb1e)
 
+	4) Properties
 	- e.g:
 	<bean name="employee" class="com.fuppino.spring.Employee">
 		<property name="data"> 
-			<list>
-				<value>1</value>
-				<value>2</value>
-				null
-			</list>
+			<props>
+				<prop key="USA">English</prop>
+				<prop key="INDIA">Hindi</prop>
+			</props>
 		</property>
 	</bean>
 
