@@ -1,4 +1,4 @@
-##Spring Crash Course ##
+## Spring Crash Course ##
 
  - It's a dependency Injection, Inversion of Control Desgin pattern framework
 
@@ -78,8 +78,8 @@
 	- property value as values 
 		e.g: <bean name="employee" class="com.fuppino.spring.Employee">
 				<property name="id" value="10"></property>
-				<property name="name" value="Ram"></property>
-			</bean>
+			 	<property name="name" value="Ram"></property>
+			 </bean>
 	- property value as element
 		e.g: <bean name="employee" class="com.fuppino.spring.Employee">
 				<property name="id"> 
@@ -88,6 +88,37 @@
 				<property name="name">
 					<value> Ram </value>
 				</property>
-			</bean>
+			 </bean>
 	- property value with p tag
 		e.g: <bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
+	** for ref: https://github.com/dvinay/Spring-crash-course/commit/ed33a66d5c60f88620e4cd2fb42208c896856124 **
+
+- Spring supports 4 types of collections as dependecies
+	1) List
+		default list type is arraylist
+		if list contains only one element, list tag will be optional
+	2) Set
+		default set type is LinkedHashSet
+		if set contains only one element, set tag will be optional
+	3) Map (Key, value)
+		
+	4) Properties
+
+	- e.g:
+	<bean name="employee" class="com.fuppino.spring.Employee">
+		<property name="data"> 
+			<list>
+				<value>1</value>
+				<value>2</value>
+				null
+			</list>
+		</property>
+	</bean>
+
+	
+
+
+
+
+
+

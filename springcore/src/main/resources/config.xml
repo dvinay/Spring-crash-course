@@ -26,4 +26,14 @@
 	<!-- value as p schema element -->
 	<bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
 	
+	<bean name="university" class="com.fuppino.spring.list.University">
+		<property name="name" value="csueb"/>
+		<property name="department">
+			<list>
+				<value>CSE</value>
+				<value>ECE</value>
+				<value>IT</value>
+			</list>
+		</property>
+	</bean>
 </beans>
