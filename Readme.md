@@ -152,6 +152,7 @@
 	for ref beans also we can use 3 types of syntax
 		- ref as property value
 		e.g: 
+
 		```xml
 		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 		<bean name="student" class="com.fuppino.spring.reftype.Student">
@@ -162,6 +163,7 @@
 
 		- ref as property element
 		e.g: 
+
 		```xml
 		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 		<bean name="student" class="com.fuppino.spring.reftype.Student">
@@ -174,6 +176,7 @@
 
 		- ref value with p tag using object_name-ref
 		e.g: 
+		
 		```xml
 		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 		<bean name="student" class="com.fuppino.spring.reftype.Student" p:name="Ram" p:score-ref="scores"/>
