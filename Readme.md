@@ -35,6 +35,7 @@
 		Set, Map, List, Properties
 
 - To create a simple spring core project, add the following dependecies to your pom.xml file
+```xml
 	<properties>
         <springframework.version>4.3.6.RELEASE</springframework.version>
     </properties>
@@ -50,8 +51,9 @@
             <version>${springframework.version}</version>
         </dependency>
     </dependencies>
-
+```
 - to create configuration settings (config.xml)
+```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<beans xmlns="http://www.springframework.org/schema/beans"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
@@ -60,36 +62,51 @@
 	    http://www.springframework.org/schema/beans/spring-beans.xsd
 	    http://www.springframework.org/schema/context
 	    http://www.springframework.org/schema/context/spring-context.xsd">
-
 	</beans>
+```
 
 - Syntax to create a bean using setter DI
+```xml
 	<bean name="emp" class="package.class.name">
 		<property name="id" value="20">
 	</bean>
+```
 
 - Syntax to create a bean using constructor DI
+```xml
 	<bean name="emp" class="package.class.name">
 		<constructor-arg name="id" value="20">
 	</bean>
+```
 
 - three ways to pass properties to a bean
 	- property value as values 
-		e.g: <bean name="employee" class="com.fuppino.spring.Employee">
+		e.g:
+		```xml 
+			<bean name="employee" class="com.fuppino.spring.Employee">
 				<property name="id" value="10"></property>
 			 	<property name="name" value="Ram"></property>
 			 </bean>
+		```
+
 	- property value as element
-		e.g: <bean name="employee" class="com.fuppino.spring.Employee">
+		e.g: 
+		```xml
+		<bean name="employee" class="com.fuppino.spring.Employee">
 				<property name="id"> 
 					<value> 10 </value>
 				</property>
 				<property name="name">
 					<value> Ram </value>
 				</property>
-			 </bean>
+		</bean>
+		```
+
 	- property value with p tag
-		e.g: <bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
+		e.g: 
+		```xml
+		<bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
+		```
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/ed33a66d5c60f88620e4cd2fb42208c896856124)
 
 - Spring supports 4 types of collections as dependecies
@@ -110,6 +127,7 @@
 
 	4) Properties
 	- e.g:
+	```xml
 	<bean name="employee" class="com.fuppino.spring.Employee">
 		<property name="data"> 
 			<props>
@@ -118,28 +136,33 @@
 			</props>
 		</property>
 	</bean>
+	```
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/357b6eeeb2d23ac2d3da4ef1c27e653b4a0906e3)
 
 - Spring supports has a relationship bean dependencies with ref tag
 	e.g:
+	```xml
 	<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 	<bean name="student" class="com.fuppino.spring.reftype.Student">
 		<property name="name" value="Ram"/>
 		<property name="score" ref="scores"/>
 	</bean>
-	
+	```
 
 	for ref beans also we can use 3 types of syntax
 		- ref as property value
 		e.g: 
+		```xml
 		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 		<bean name="student" class="com.fuppino.spring.reftype.Student">
 			<property name="name" value="Ram"/>
 			<property name="score" ref="scores"/>
 		</bean>
-		
+		```
+
 		- ref as property element
 		e.g: 
+		```xml
 		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 		<bean name="student" class="com.fuppino.spring.reftype.Student">
 			<property name="name" value="Ram"/>
@@ -147,12 +170,14 @@
 				<ref bean="scores"/>
 			</property>
 		</bean>
+		```
 
 		- ref value with p tag using object_name-ref
 		e.g: 
+		```xml
 		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 		<bean name="student" class="com.fuppino.spring.reftype.Student" p:name="Ram" p:score-ref="scores"/>
-
+		```
 
 
 
