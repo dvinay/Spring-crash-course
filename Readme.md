@@ -252,6 +252,13 @@ e.g:
 - session => one object per session
 - global session => complete application get one object based on session
 
+```xml
+<bean name="employee" class="com.fuppino.spring.innerbean.Employee" p:name="Ram" scope="prototype">
+		<property name="address">
+			<bean class="com.fuppino.spring.innerbean.Address" p:cityName="Fremont"/>
+		</property>
+</bean>
+```
 
 
 

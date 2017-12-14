@@ -16,4 +16,6 @@
 			<bean class="com.fuppino.spring.innerbean.Address" p:cityName="Fremont"/>
 		</property>
 	</bean>
+	
+	<bean name="item" class="com.fuppino.spring.prototype.Item" p:id="23" p:name="data" scope="prototype"/>
 </beans>
