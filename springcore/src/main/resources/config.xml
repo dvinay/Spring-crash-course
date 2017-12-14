@@ -72,4 +72,9 @@
 		</property>
 	</bean>
 	
+	<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
+	<bean name="student" class="com.fuppino.spring.reftype.Student">
+		<property name="name" value="Ram"/>
+		<property name="score" ref="scores"/>
+	</bean>
 </beans>

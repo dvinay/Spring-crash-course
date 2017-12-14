@@ -119,8 +119,15 @@
 			</props>
 		</property>
 	</bean>
+	[reg](https://github.com/dvinay/Spring-crash-course/commit/357b6eeeb2d23ac2d3da4ef1c27e653b4a0906e3)
 
-	
+- Spring supports has a relationship bean dependencies with ref tag
+	e.g:
+	<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
+	<bean name="student" class="com.fuppino.spring.reftype.Student">
+		<property name="name" value="Ram"/>
+		<property name="score" ref="scores"/>
+	</bean>
 
 
 
