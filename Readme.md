@@ -272,5 +272,6 @@ e.g:
 	<constructor-arg name="name" value="Sample"/>
 </bean>
 ```
+- constructor-arg also uses as element, argument or c-schema
 
 
