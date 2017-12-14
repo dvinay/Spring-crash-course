@@ -11,4 +11,9 @@
     
 	<bean name="patient" class="com.fuppino.spring.Patient" p:id="23"/>
 	
+	<bean name="employee" class="com.fuppino.spring.innerbean.Employee" p:name="Ram">
+		<property name="address">
+			<bean class="com.fuppino.spring.innerbean.Address" p:cityName="Fremont"/>
+		</property>
+	</bean>
 </beans>

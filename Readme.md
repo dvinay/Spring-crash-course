@@ -229,5 +229,17 @@
 - to check the dependency, need to add @Required before set method
 - [ref](https://github.com/dvinay/Spring-crash-course/commit/738d23a86fe78c35ff3212996967a29afcb265b0)
 
+### Spring inner bean dependency creation ###
 
+- instead of ref tag, we can use inner bean
+- inner bean will create only for the parent bean
+e.g:
+
+```xml
+<bean name="employee" class="com.fuppino.spring.innerbean.Employee" p:name="Ram">
+		<property name="address">
+			<bean class="com.fuppino.spring.innerbean.Address" p:cityName="Fremont"/>
+		</property>
+	</bean>
+```
 
