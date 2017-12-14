@@ -98,10 +98,11 @@
 		default list type is arraylist
 		if list contains only one element, list tag will be optional
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/919466965f8f26c91a6216b59e7ce4f389cf2cfc)
-	
+
 	2) Set
 		default set type is LinkedHashSet
 		if set contains only one element, set tag will be optional
+		
 	3) Map (Key, value)
 		
 	4) Properties

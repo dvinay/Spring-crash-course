@@ -26,6 +26,7 @@
 	<!-- value as p schema element -->
 	<bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
 	
+	<!-- coolection list data -->
 	<bean name="university" class="com.fuppino.spring.list.University">
 		<property name="name" value="csueb"/>
 		<property name="department">
@@ -34,6 +35,18 @@
 				<value>ECE</value>
 				<value>IT</value>
 			</list>
+		</property>
+	</bean>
+	
+	<!-- coolection set data -->
+	<bean name="carDealer" class="com.fuppino.spring.set.CarDealer">
+		<property name="name" value="honda"/>
+		<property name="modles">
+			<set>
+				<value>Honda</value>
+				<value>Civic</value>
+				<value>CR-V</value>
+			</set>
 		</property>
 	</bean>
 </beans>
