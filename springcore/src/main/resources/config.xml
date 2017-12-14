@@ -78,4 +78,6 @@
 		<property name="name" value="Ram"/>
 		<property name="score" ref="scores"/>
 	</bean>
+	
+	<bean name="item" class="com.fuppino.spring.lc.xmlconfig.Item" p:id="23" init-method="init" destroy-method="destroy"/>
 </beans>

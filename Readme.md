@@ -149,9 +149,8 @@
 	</bean>
 	```
 
-	for ref beans also we can use 3 types of syntax
-		- ref as property value
-		e.g: 
+- for ref beans also we can use 3 types of syntax
+		1) ref as property value
 
 		```xml
 		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
@@ -161,8 +160,7 @@
 		</bean>
 		```
 
-		- ref as property element
-		e.g: 
+		2) ref as property element
 
 		```xml
 		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
@@ -174,13 +172,32 @@
 		</bean>
 		```
 
-		- ref value with p tag using object_name-ref
-		e.g: 
-		
+		3) ref value with p tag using object_name-ref
+
 		```xml
 		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 		<bean name="student" class="com.fuppino.spring.reftype.Student" p:name="Ram" p:score-ref="scores"/>
 		```
+
+- Spring provides two life cycle methods for every bean it creates
+	1) public void init()
+	2) public void destroy()
+
+- The flow of the life cycle is create-> set the data(setter/constructor)-> invoke init()-> read/use-> destory()-> delete
+
+- any initialization code, like db-connection,server connection, properties setting can go into init method
+
+- any cleanup code, like cleaning resources go into destroy
+	Note: to call the destroy method. you have to call registerShutdownHook() method, which is available in AbstractApplicationContext class
+	
+- Three ways to configure the lifecycle method
+	1) XML Configuration
+	```xml
+		<bean name="item" class="com.fuppino.spring.lc.xmlconfig.Item" p:id="23" init-method="init" destroy-method="destroy"/>
+	```
+	2) implementing interfaces
+	3) Annotation
+
 
 
 
