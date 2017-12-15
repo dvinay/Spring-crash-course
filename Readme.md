@@ -302,7 +302,9 @@ e.g:
 	2) Annotation
 		a) @Autowired
 		b) @Qualifier
--
+
+- autowiring using By Type
+	
 
 
 
