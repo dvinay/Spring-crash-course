@@ -18,4 +18,10 @@
     
     <bean name="student" class="com.fuppino.spring.autowire.byname.Student"
     	p:name="Ravana" autowire="byName"/>
+    	
+    <bean name="profile" class="com.fuppino.spring.autowire.byconstructor.Profile" p:skil="Java"/>
+    
+    <bean name="job" class="com.fuppino.spring.autowire.byconstructor.Job"
+    	p:name="Software Engineer" autowire="constructor"/>
+
 </beans>

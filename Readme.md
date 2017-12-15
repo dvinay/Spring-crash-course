@@ -328,6 +328,18 @@ e.g:
 <bean name="student" class="com.fuppino.spring.byname.Student" p:name="Ravana" autowire="byName"/>
 ```
 
+- autowiring using "constructor"
+	- based on bean type, container will inject the bean automatically
+	- dependent object name must be same as the configuration
+	[ref]()
+	- if spring doesn't find the proper object type, then it inject null
+	- if autowiring is depending on scope, there is chance to get different scopes depending on the scope of the main bean and auto-wired bean
+
+```XML
+<bean name="profile" class="com.fuppino.spring.autowire.byconstructor.Profile" p:skil="Java"/>
+    
+<bean name="job" class="com.fuppino.spring.autowire.byconstructor.Job" p:name="Software Engineer" autowire="constructor"/>
+```
 
 
 
