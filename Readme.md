@@ -364,6 +364,7 @@ e.g:
 	- if configuration has multiple beans with same class type; spring container is not able to fetch the exact bean while autowiring configuration
 	- we can resolve this confilt or ambiguity by using @Qualifier("bean-name")
 	- [ref](https://github.com/dvinay/Spring-crash-course/commit/e42ff76d57e8941dc5a355d255d45669df810b23)
+	- if autowired option required is true and not matched qualifier found in the container, it will genetate NoSuchBeanDefinitionException
 ```XML
 <bean name="model1" class="com.fuppino.spring.autowire.qualifier.Model" p:name="CR-V"/>
 	
