@@ -346,10 +346,11 @@ e.g:
 	- Note: add context:annotation-config to enable spring to annotations
 	- based on bean type, container will inject the bean automatically
 	- annotation can be placed before the setter or constructor or field level
-	[ref]()
+	[ref](https://github.com/dvinay/Spring-crash-course/commit/bdb9b33dbeefddf63d70794fd0fd035e8614789c)
 	- if spring doesn't find the proper object type, then it inject null
 	- if autowiring is depending on scope, there is chance to get different scopes depending on the scope of the main bean and auto-wired bean
-
+	- @Autowired has one default boolean parameter called "required"
+	- @Autowired(required = true), if spring is not able to find the depe
 ```XML
 <context:annotation-config/>
 
@@ -358,7 +359,27 @@ e.g:
 <bean name="shoppingCart" class="com.fuppino.spring.autowire.annotation.ShoppingCart"
     	p:name="onsale"/>
 ```
-		
+
+- autowiring using "@Qualifier"
+	- if configuration has multiple beans with same class type; spring container is not able to fetch the exact bean while autowiring configuration
+	- we can resolve this confilt or ambiguity by using @Qualifier("bean-name")
+	- [ref]()
+```XML
+<bean name="model1" class="com.fuppino.spring.autowire.qualifier.Model" p:name="CR-V"/>
+	
+<bean name="model2" class="com.fuppino.spring.autowire.qualifier.Model" p:name="HR-V"/>
+    
+<bean name="car" class="com.fuppino.spring.autowire.qualifier.Car"/>
+```
+```JAVA
+public class Car {
+
+	@Autowired(required=false)
+	@Qualifier("model2")
+	private Model model;
+}
+```
+
 
 
 

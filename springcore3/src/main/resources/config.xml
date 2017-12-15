@@ -10,24 +10,35 @@
     
     <context:annotation-config/>
     
+    <!-- autowire by Type -->
     <bean name="address" class="com.fuppino.spring.autowire.bytype.Address" p:cityName="Fremont"/>
     
     <bean name="employee" class="com.fuppino.spring.autowire.bytype.Employee"
     	p:name="Ram" autowire="byType">
     </bean>
     
+    <!-- autowire by Name -->
     <bean name="course" class="com.fuppino.spring.autowire.byname.Course" p:subject="CSE"/>
     
     <bean name="student" class="com.fuppino.spring.autowire.byname.Student"
     	p:name="Ravana" autowire="byName"/>
     	
+    <!-- autowire by Constructor -->
     <bean name="profile" class="com.fuppino.spring.autowire.byconstructor.Profile" p:skil="Java"/>
     
     <bean name="job" class="com.fuppino.spring.autowire.byconstructor.Job"
     	p:name="Software Engineer" autowire="constructor"/>
 
+	<!-- autowire with annotation -->
 	<bean name="item" class="com.fuppino.spring.autowire.annotation.Item" p:name="IPhone"/>
     
     <bean name="shoppingCart" class="com.fuppino.spring.autowire.annotation.ShoppingCart"
     	p:name="onsale"/>
+    	
+    <!-- autowire and qualifier with annotation -->
+	<bean name="model1" class="com.fuppino.spring.autowire.qualifier.Model" p:name="CR-V"/>
+	
+    <bean name="model2" class="com.fuppino.spring.autowire.qualifier.Model" p:name="HR-V"/>
+    
+    <bean name="car" class="com.fuppino.spring.autowire.qualifier.Car"/>
 </beans>
