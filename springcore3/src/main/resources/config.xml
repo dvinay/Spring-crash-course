@@ -8,6 +8,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+    <context:annotation-config/>
+    
     <bean name="address" class="com.fuppino.spring.autowire.bytype.Address" p:cityName="Fremont"/>
     
     <bean name="employee" class="com.fuppino.spring.autowire.bytype.Employee"
@@ -24,4 +26,8 @@
     <bean name="job" class="com.fuppino.spring.autowire.byconstructor.Job"
     	p:name="Software Engineer" autowire="constructor"/>
 
+	<bean name="item" class="com.fuppino.spring.autowire.annotation.Item" p:name="IPhone"/>
+    
+    <bean name="shoppingCart" class="com.fuppino.spring.autowire.annotation.ShoppingCart"
+    	p:name="onsale"/>
 </beans>

@@ -331,7 +331,7 @@ e.g:
 - autowiring using "constructor"
 	- based on bean type, container will inject the bean automatically
 	- dependent object name must be same as the configuration
-	[ref]()
+	[ref](https://github.com/dvinay/Spring-crash-course/commit/552eb183001ef971de0716ce7cb79d584d46037b)
 	- if spring doesn't find the proper object type, then it inject null
 	- if autowiring is depending on scope, there is chance to get different scopes depending on the scope of the main bean and auto-wired bean
 
@@ -341,7 +341,24 @@ e.g:
 <bean name="job" class="com.fuppino.spring.autowire.byconstructor.Job" p:name="Software Engineer" autowire="constructor"/>
 ```
 
+- autowiring using "@Autowired"
+	- it's independent of config file, not need to specify the autowire tag
+	- Note: add context:annotation-config to enable spring to annotations
+	- based on bean type, container will inject the bean automatically
+	- annotation can be placed before the setter or constructor or field level
+	[ref]()
+	- if spring doesn't find the proper object type, then it inject null
+	- if autowiring is depending on scope, there is chance to get different scopes depending on the scope of the main bean and auto-wired bean
 
+```XML
+<context:annotation-config/>
+
+<bean name="item" class="com.fuppino.spring.autowire.annotation.Item" p:name="IPhone"/>
+    
+<bean name="shoppingCart" class="com.fuppino.spring.autowire.annotation.ShoppingCart"
+    	p:name="onsale"/>
+```
+		
 
 
 
