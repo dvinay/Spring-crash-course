@@ -275,3 +275,15 @@ e.g:
 - constructor-arg also uses as element, argument or c-schema
 [ref](https://github.com/dvinay/Spring-crash-course/commit/9c92ff68f5f23661d2ba2b10c19bc9f65611aec5)
 
+### Spring bean creation using constructor-arg Ambiguity Problem ###
+- As java class allows constructor overloading, there is a chance to get Ambiguity
+- Spring defaultly check constructor with string data type as input. If it's not found, then it will check for first constructor.
+- We can resolve this constructor-arg by using type, index or name
+
+### Spring bean creation externalization ##
+- Reading data from properties files
+- to read data from properties files, we have to add context:property-placeholder in config.xml
+```xml
+- <context:property-placeholder location="classpath:database.properties"/>
+```
+

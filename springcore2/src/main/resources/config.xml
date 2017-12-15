@@ -26,4 +26,17 @@
 	</bean>
 	
 	<bean name="cons" class="com.fuppino.spring.constructor.cschema.Cons" c:id="23" c:name="Sample"/>
+	
+	<context:property-placeholder location="classpath:database.properties"/>
+	<bean name="extern" class="com.fuppino.spring.externalization.Extern">
+		<constructor-arg>
+			<value>${dbServer}</value>
+		</constructor-arg>
+		<constructor-arg name="userId">
+			<value>${userId}</value>
+		</constructor-arg>
+		<constructor-arg name="password">
+			<value>${password}</value>
+		</constructor-arg>
+	</bean>
 </beans>
