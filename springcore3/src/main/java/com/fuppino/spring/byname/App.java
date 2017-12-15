@@ -12,10 +12,9 @@ public class App
 	{
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
 		
-		Employee employee = (Employee)ctx.getBean("employee");	
-		System.out.println("Employee : "+employee);
-		System.out.println("Address : "+employee.getAddress());
-		System.out.println("Address hashcode: "+employee.getAddress().hashCode());	
+		Student student = (Student)ctx.getBean("student");	
+		System.out.println("Student : "+student);
+		System.out.println("Course  : "+student.getCourse());	
 		
 	}
 }

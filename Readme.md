@@ -303,15 +303,30 @@ e.g:
 		a) @Autowired
 		b) @Qualifier
 
-- autowiring using By Type
+- autowiring using ByType
 	- based on bean type, container will inject the bean automatically
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/41fec3e3cb5bb37e370360a79f2ba86076e6cbd4)
 	- if your configuration xml contains multiple objects of same class type, then spring will generate the NoUniqueBeanDefinitionException.
 	- if spring doesn't find the proper object type, then it inject null
 	- if autowiring is depending on scope, there is chance to get different scopes depending on the scope of the main bean and auto-wired bean
+```XML
+<bean name="address" class="com.fuppino.spring.bytype.Address" p:cityName="Fremont"/>
+    
+<bean name="employee" class="com.fuppino.spring.bytype.Employee" p:name="Ram" autowire="byType"/>
+```
 
+- autowiring using ByName
+	- based on bean name, container will inject the bean automatically
+	- dependent object name must be same as the configuration
+	[ref]()
+	- if spring doesn't find the proper object name, then it inject null
+	- if autowiring is depending on scope, there is chance to get different scopes depending on the scope of the main bean and auto-wired bean
 
-
+```XML
+<bean name="course" class="com.fuppino.spring.byname.Course" p:subject="CSE"/>
+    
+<bean name="student" class="com.fuppino.spring.byname.Student" p:name="Ravana" autowire="byName"/>
+```
 
 
 

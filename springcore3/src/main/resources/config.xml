@@ -13,4 +13,9 @@
     <bean name="employee" class="com.fuppino.spring.bytype.Employee"
     	p:name="Ram" autowire="byType">
     </bean>
+    
+    <bean name="course" class="com.fuppino.spring.byname.Course" p:subject="CSE"/>
+    
+    <bean name="student" class="com.fuppino.spring.byname.Student"
+    	p:name="Ravana" autowire="byName"/>
 </beans>
