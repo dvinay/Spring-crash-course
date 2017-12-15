@@ -1,4 +1,4 @@
-package com.fuppino.spring;
+package com.fuppino.spring.bytype;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,5 +14,8 @@ public class App
 		
 		Employee employee = (Employee)ctx.getBean("employee");	
 		System.out.println("Employee : "+employee);
+		System.out.println("Address : "+employee.getAddress());
+		System.out.println("Address hashcode: "+employee.getAddress().hashCode());	
+		
 	}
 }

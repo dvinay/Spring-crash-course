@@ -1,4 +1,4 @@
-package com.fuppino.spring;
+package com.fuppino.spring.byname;
 
 public class Address {
 

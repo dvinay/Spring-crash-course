@@ -8,7 +8,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <bean name="address" class="com.fuppino.spring.Address" p:cityName="Fremont"/>
+    <bean name="address" class="com.fuppino.spring.bytype.Address" p:cityName="Fremont"/>
     
-    <bean name="employee" class="com.fuppino.spring.Employee" p:name="Ram" autowire="byType"></bean>
+    <bean name="employee" class="com.fuppino.spring.bytype.Employee"
+    	p:name="Ram" autowire="byType">
+    </bean>
 </beans>
