@@ -273,6 +273,7 @@ e.g:
 </bean>
 ```
 - constructor-arg also uses as element, argument or c-schema
+- for c-schema, we need to include xmlns:c="http://www.springframework.org/schema/c" into configuration file
 [ref](https://github.com/dvinay/Spring-crash-course/commit/9c92ff68f5f23661d2ba2b10c19bc9f65611aec5)
 
 ### Spring bean creation using constructor-arg Ambiguity Problem ###
