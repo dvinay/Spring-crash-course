@@ -284,10 +284,30 @@ e.g:
 - Reading data from properties files
 - to read data from properties files, we have to add context:property-placeholder in config.xml
 ```xml
-- <context:property-placeholder location="classpath:database.properties"/>
+<context:property-placeholder location="classpath:database.properties"/>
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/a0e9837c765619f05a694dbab4a54978fc1e880d)
 - if the property doesn't exist then BeanDefinitionStoreException occurs
+
+
+### Spring bean autowiring ##
+-autowiring is a concept, where Dependency can be managed by container
+-autowiring can be done, in two ways
+	1) XML
+		a) NO(Default)
+		b) By Type (setter injection)
+		c) By Name (setter injection)
+		d) Auto Detect ( < spring 2.0 )
+		e) By Constructor (constructor injection)
+	2) Annotation
+		a) @Autowired
+		b) @Qualifier
+-
+
+
+
+
+
 
 
 
