@@ -286,4 +286,8 @@ e.g:
 ```xml
 - <context:property-placeholder location="classpath:database.properties"/>
 ```
+[ref](https://github.com/dvinay/Spring-crash-course/commit/a0e9837c765619f05a694dbab4a54978fc1e880d)
+- if the property doesn't exist then BeanDefinitionStoreException occurs
+
+
 
