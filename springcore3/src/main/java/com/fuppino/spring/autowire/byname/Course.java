@@ -1,4 +1,4 @@
-package com.fuppino.spring.byname;
+package com.fuppino.spring.autowire.byname;
 
 public class Course {
 

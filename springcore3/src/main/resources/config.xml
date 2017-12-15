@@ -8,14 +8,14 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <bean name="address" class="com.fuppino.spring.bytype.Address" p:cityName="Fremont"/>
+    <bean name="address" class="com.fuppino.spring.autowire.bytype.Address" p:cityName="Fremont"/>
     
-    <bean name="employee" class="com.fuppino.spring.bytype.Employee"
+    <bean name="employee" class="com.fuppino.spring.autowire.bytype.Employee"
     	p:name="Ram" autowire="byType">
     </bean>
     
-    <bean name="course" class="com.fuppino.spring.byname.Course" p:subject="CSE"/>
+    <bean name="course" class="com.fuppino.spring.autowire.byname.Course" p:subject="CSE"/>
     
-    <bean name="student" class="com.fuppino.spring.byname.Student"
+    <bean name="student" class="com.fuppino.spring.autowire.byname.Student"
     	p:name="Ravana" autowire="byName"/>
 </beans>

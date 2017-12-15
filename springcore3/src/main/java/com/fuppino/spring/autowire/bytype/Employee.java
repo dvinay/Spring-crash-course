@@ -1,4 +1,4 @@
-package com.fuppino.spring.bytype;
+package com.fuppino.spring.autowire.bytype;
 
 
 public class Employee {

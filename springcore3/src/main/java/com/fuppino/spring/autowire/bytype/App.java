@@ -1,4 +1,4 @@
-package com.fuppino.spring.bytype;
+package com.fuppino.spring.autowire.bytype;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
