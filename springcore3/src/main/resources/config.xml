@@ -12,7 +12,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
     
     <context:annotation-config/>
-    
+    <context:component-scan base-package="com.fuppino.spring.stereotype.annotation"></context:component-scan>
     <!-- autowire by Type -->
     <bean name="address" class="com.fuppino.spring.autowire.bytype.Address" p:cityName="Fremont"/>
     
@@ -55,4 +55,5 @@
     <bean name="productList" class="com.fuppino.spring.standalone.collections.ProductList">
     	<property name="productNames" ref="productNames"/>
     </bean>
+    
 </beans>

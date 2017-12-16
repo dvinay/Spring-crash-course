@@ -425,6 +425,18 @@ public class Car {
 
 [ref](https://github.com/dvinay/Spring-crash-course/commit/fc207ee510817942417f91ecdd12c6c4adc5557d)
 
-
+### Spring Sterotype Annotations ##
+- Sterotype Annotation @Component
+	-@Component is similar to bean tag in the configuration file
+	-spring creates a bean, using new keyword
+	e.g: Student student = new Student();
+	-we have to include following line in configuration file to spring container search the classes with @Component annotation
+	- spring search the base package and sub package also for component
+	- Note: annotation-config is optional part
+```XML
+<context:annotation-config/>
+<context:component-scan base-package="com.base.package"/>
+```
+[ref]()
 
 
