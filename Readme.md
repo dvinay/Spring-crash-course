@@ -445,3 +445,17 @@ public class Car {
 	- to create bean with other scope we need to use @Scope annotation like @Scope("prototype")
 [ref](https://github.com/dvinay/Spring-crash-course/commit/ba79768007cac4a8db63d69f09db8e51b784cfae)
 
+- Sterotype Annotation @Value
+	- to assign values to bean properties, we have to use @Value() annotation
+	- value annotation is depending on the type of data your inserting
+		- primitive data => @Value()
+		- collection data => 
+			util:collectionName collectionName="" id="cllectionId"
+			@Value(#{cllectionId})
+		- Object type/ref => @Autowired
+
+	- @Value will override the value given to the property
+```JAVA
+	@Value(10)
+	int data = 20; //the final value will be 10
+```
