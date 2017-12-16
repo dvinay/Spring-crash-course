@@ -499,7 +499,7 @@ public class Car {
 
 - We can use same using annotation, with out touching configuration
 [ref](https://github.com/dvinay/Spring-crash-course/commit/d348c67eb120e6e379f18a9d06eccec2f172ffe4#diff-5b55836b1ed7a824c0c5ee1dd1920b6b)
-
+- If you implement multiple child classes for a single interface use @Qualifier("bean-name") and @Component("bean-name")
 
 
 
