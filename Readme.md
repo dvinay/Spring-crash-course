@@ -430,6 +430,7 @@ public class Car {
 	-@Component is similar to bean tag in the configuration file
 	-spring creates a bean, using new keyword
 	e.g: Student student = new Student();
+	- we can change the bean name by giving the name in @Component annotation like @Component("beanName")
 	-we have to include following line in configuration file to spring container search the classes with @Component annotation
 	- spring search the base package and sub package also for component
 	- Note: annotation-config is optional part
@@ -438,10 +439,9 @@ public class Car {
 <context:component-scan base-package="com.base.package"/>
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/99c9c7b65dcc289fae2e8435b4a4bb8d93afdb4a)
-	- we can change the bean name by giving the name in @Component annotation like @Component("beanName")
 
 - Sterotype Annotation @Scope
 	- while using @Component, spring creats a bean with default scope(singleton)
 	- to create bean with other scope we need to use @Scope annotation like @Scope("prototype")
-[ref]()
+[ref](https://github.com/dvinay/Spring-crash-course/commit/ba79768007cac4a8db63d69f09db8e51b784cfae)
 
