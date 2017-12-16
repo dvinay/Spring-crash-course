@@ -475,8 +475,15 @@ public class Car {
 	- @Value("#{T(java.lang.Math).abs(-99)}")
 [ref](https://github.com/dvinay/Spring-crash-course/commit/79621c57e8e96865ec655c1b3a17d82f34d14528#diff-808b9c38dc8b43044f91790eae049152)
 
+- you can use static variable in spring expression
+    - @Value("#T(complete class name).variable")
 
+- you can create an object in spring expression
+	- @Value("#{new Integer()}")
 
+- you can create a String type object in spring expression using single quote
+	- @Value("#{'Ram'}")
+	- @Value("#{'Ram'.toUpperCase()}")
 
 
 

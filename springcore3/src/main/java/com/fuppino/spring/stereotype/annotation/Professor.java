@@ -11,10 +11,10 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Professor {
 	
-	@Value("#{T(java.lang.Math).abs(-99)}")
+	@Value("#{T(java.lang.Integer).MIN_VALUE}")
 	private int id;
 	
-	@Value("Ram")
+	@Value("#{'Ram'.toUpperCase()}")
 	private String name;
 
 	@Value("#{topicsList}")
