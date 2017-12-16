@@ -461,3 +461,21 @@ public class Car {
 	int data = 20; //the final value will be 10
 ```
 
+### Spring Ecpression Language ##
+
+- Spring expression language, supports parsing and execting the expression with help of @Value annotation using # symbol
+- spring expressions are combinations of classes, methods, variable, Constructors, Objects and symblos
+- you can use symbols like + symbol
+@Value("#{10+30}")
+
+
+
+
+
+
+
+
+
+
+
+

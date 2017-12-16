@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Professor {
 	
-	@Value("10")
+	@Value("#{10+30}")
 	private int id;
 	
 	@Value("Ram")
