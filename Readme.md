@@ -468,9 +468,11 @@ public class Car {
 - you can use symbols like + symbol
 @Value("#{10+30}")
 [ref](https://github.com/dvinay/Spring-crash-course/commit/5c940692513c7cdaf87c923b8515ee14bb5c0fa9#diff-808b9c38dc8b43044f91790eae049152)
+
 - you can use static methods call in spring expression language
 	- @Value("#T(complete class name).method(param)")
 	- @Value("#{T(java.lang.Math).abs(-99)}")
+[ref](https://github.com/dvinay/Spring-crash-course/commit/79621c57e8e96865ec655c1b3a17d82f34d14528#diff-808b9c38dc8b43044f91790eae049152)
 
 
 
