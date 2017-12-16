@@ -501,6 +501,15 @@ public class Car {
 [ref](https://github.com/dvinay/Spring-crash-course/commit/d348c67eb120e6e379f18a9d06eccec2f172ffe4#diff-5b55836b1ed7a824c0c5ee1dd1920b6b)
 - If you implement multiple child classes for a single interface use @Qualifier("bean-name") and @Component("bean-name")
 
+### Spring JDBC ###
+- Spring JDBC helps to reduce the database connection and operation code by using spring template
+- Spring template is compbination of JDBC technology and Template Design pattern
+- Template carries all the boiler plate code for database connection
+- To use JDBCTemplate in spring, we have to provide a DataSource, it is an interface javax.sql.DataSource.
+- Spring provides a implementation class for DataSource called DriverManagerDataSource; we will create this bean in spring configuration
+- DriverManagerDataSource takes 4 parameters, dirverClassName, url, userName, password
+- JDBCTemplate provides couple of methods for sql operations
+
 
 
 
