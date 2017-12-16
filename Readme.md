@@ -467,7 +467,7 @@ public class Car {
 - spring expressions are combinations of classes, methods, variable, Constructors, Objects and symblos
 - you can use symbols like + symbol
 @Value("#{10+30}")
-
+[ref](https://github.com/dvinay/Spring-crash-course/commit/5c940692513c7cdaf87c923b8515ee14bb5c0fa9#diff-808b9c38dc8b43044f91790eae049152)
 
 
 
