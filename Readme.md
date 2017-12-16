@@ -180,6 +180,7 @@
 		<bean name="student" class="com.fuppino.spring.reftype.Student" p:name="Ram" p:score-ref="scores"/>
 		```
 
+### Spring bean life cycle methods ###
 - Spring provides two life cycle methods for every bean it creates
 	1) public void init()
 	2) public void destroy()
@@ -281,7 +282,7 @@ e.g:
 - Spring defaultly check constructor with string data type as input. If it's not found, then it will check for first constructor.
 - We can resolve this constructor-arg by using type, index or name
 
-### Spring bean creation externalization ##
+### Spring bean creation externalization ###
 - Reading data from properties files
 - to read data from properties files, we have to add context:property-placeholder in config.xml
 ```xml
@@ -291,7 +292,7 @@ e.g:
 - if the property doesn't exist then BeanDefinitionStoreException occurs
 
 
-### Spring bean autowiring ##
+### Spring bean autowiring ###
 -autowiring is a concept, where Dependency can be managed by container
 -autowiring can be done, in two ways
 	1) XML
@@ -382,7 +383,7 @@ public class Car {
 }
 ```
 
-### Spring Standalone Collections ##
+### Spring Standalone Collections ###
 
 - using java collections in spring is little tricky, so Spring has adapted standalone collection technique.
 - to use standalone collection, add util schema and use name space and create collection
@@ -425,7 +426,7 @@ public class Car {
 
 [ref](https://github.com/dvinay/Spring-crash-course/commit/fc207ee510817942417f91ecdd12c6c4adc5557d)
 
-### Spring Sterotype Annotations ##
+### Spring Sterotype Annotations ###
 - Sterotype Annotation @Component
 	-@Component is similar to bean tag in the configuration file
 	-spring creates a bean, using new keyword
@@ -461,7 +462,7 @@ public class Car {
 	int data = 20; //the final value will be 10
 ```
 
-### Spring Ecpression Language ##
+### Spring Ecpression Language ###
 
 - Spring expression language, supports parsing and execting the expression with help of @Value annotation using # symbol
 - spring expressions are combinations of classes, methods, variable, Constructors, Objects and symblos
