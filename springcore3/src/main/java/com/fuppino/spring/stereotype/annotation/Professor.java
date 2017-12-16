@@ -16,7 +16,10 @@ public class Professor {
 	
 	@Value("#{'Ram'.toUpperCase()}")
 	private String name;
-
+	
+	@Value("#{34>23}")
+	private boolean check;
+	
 	@Value("#{topicsList}")
 	private List<String> topics;
 	
@@ -82,8 +85,9 @@ public class Professor {
 
 	@Override
 	public String toString() {
-		return "Professor [id=" + id + ", name=" + name + ", topics=" + topics
-				+ ", courses=" + courses + "]";
+		return "Professor [id=" + id + ", name=" + name + ", check=" + check
+				+ ", topics=" + topics + ", courses=" + courses + "]";
 	}
+
 	
 }

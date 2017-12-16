@@ -486,6 +486,13 @@ public class Car {
 	- @Value("#{'Ram'.toUpperCase()}")
 [ref](https://github.com/dvinay/Spring-crash-course/commit/bf5a92dad08075b00acbca640be10b182578486c#diff-808b9c38dc8b43044f91790eae049152)
 
+- you can use boolean in spring expression
+	- @Value("#{34>23}")
+
+
+
+
+
 
 
 
