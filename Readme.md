@@ -494,9 +494,11 @@ public class Car {
 - We can use runtime polymorphism by using interface object reference to child classes
 - to implement, this kind of runtime polymorphism. We need to use configuration changes only, not the code changes
 
+[ref](https://github.com/dvinay/Spring-crash-course/commit/bb31da8c68f84bc794e81894988f71a5aba73dad)
+[ref](https://github.com/dvinay/Spring-crash-course/commit/35b8d48532e63bb838d171cd490ac7a32d720f5a)
 
 - We can use same using annotation, with out touching configuration
-
+[ref]()
 
 
 
