@@ -1,8 +1,10 @@
 package com.fuppino.spring.stereotype.annotation;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("profe")
+@Scope("prototype")
 public class Professor {
 	private int id;
 	private String name;

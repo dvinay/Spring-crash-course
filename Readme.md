@@ -438,5 +438,10 @@ public class Car {
 <context:component-scan base-package="com.base.package"/>
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/99c9c7b65dcc289fae2e8435b4a4bb8d93afdb4a)
+	- we can change the bean name by giving the name in @Component annotation like @Component("beanName")
 
+- Sterotype Annotation @Scope
+	- while using @Component, spring creats a bean with default scope(singleton)
+	- to create bean with other scope we need to use @Scope annotation like @Scope("prototype")
+[ref]()
 
