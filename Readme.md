@@ -449,8 +449,10 @@ public class Car {
 	- to assign values to bean properties, we have to use @Value() annotation
 	- value annotation is depending on the type of data your inserting
 		- primitive data => @Value()
+		[ref](https://github.com/dvinay/Spring-crash-course/commit/6db6d0e9b213dfd1c2e1499c9d93d083aac6bcae)
 		- collection data => use util give util collection id in value annotation
 			@Value(#{cllectionId})
+		[ref](https://github.com/dvinay/Spring-crash-course/commit/75952c5cfe1a84ab13b8a753ef27ceb8f881b7b6)
 		- Object type/ref => @Autowired
 
 	- @Value will override the value given to the property
@@ -458,4 +460,4 @@ public class Car {
 	@Value(10)
 	int data = 20; //the final value will be 10
 ```
-[ref](https://github.com/dvinay/Spring-crash-course/commit/6db6d0e9b213dfd1c2e1499c9d93d083aac6bcae)
+
