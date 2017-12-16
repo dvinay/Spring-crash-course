@@ -56,4 +56,11 @@
     	<property name="productNames" ref="productNames"/>
     </bean>
     
+    <!-- standalone collection -->
+    <util:list list-class="java.util.LinkedList" id="topicsList">
+    	<value>Java</value>
+    	<value>C++</value>
+    	<value>J2EE</value>
+    </util:list>
+    
 </beans>

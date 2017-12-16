@@ -458,5 +458,4 @@ public class Car {
 	@Value(10)
 	int data = 20; //the final value will be 10
 ```
-
 [ref](https://github.com/dvinay/Spring-crash-course/commit/6db6d0e9b213dfd1c2e1499c9d93d083aac6bcae)
