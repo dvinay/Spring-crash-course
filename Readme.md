@@ -393,8 +393,8 @@ public class Car {
 ```
 
 - steps to use util
-	1) add util name space xmlns:util="http://www.springframework.org/schema/util" and http://www.springframework.org/schema/util
-    http://www.springframework.org/schema/util/spring-util.xsd
+	1) add util name space xmlns:util="http://www.springframework.org/schema/util" and "http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd"
 ```XML
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
@@ -423,7 +423,8 @@ public class Car {
 </bean>
 ```
 
-[ref]()
+[ref](https://github.com/dvinay/Spring-crash-course/commit/fc207ee510817942417f91ecdd12c6c4adc5557d)
+
 
 
 
