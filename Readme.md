@@ -498,7 +498,7 @@ public class Car {
 [ref](https://github.com/dvinay/Spring-crash-course/commit/35b8d48532e63bb838d171cd490ac7a32d720f5a)
 
 - We can use same using annotation, with out touching configuration
-[ref]()
+[ref](https://github.com/dvinay/Spring-crash-course/commit/d348c67eb120e6e379f18a9d06eccec2f172ffe4#diff-5b55836b1ed7a824c0c5ee1dd1920b6b)
 
 
 
