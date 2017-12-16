@@ -488,7 +488,7 @@ public class Car {
 
 - you can use boolean in spring expression
 	- @Value("#{34>23}")
-
+[ref](https://github.com/dvinay/Spring-crash-course/commit/0e78b317c49368126a84bec48a8201cd8d986b9b#diff-808b9c38dc8b43044f91790eae049152)
 
 
 
