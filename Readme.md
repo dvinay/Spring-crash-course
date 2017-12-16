@@ -382,6 +382,48 @@ public class Car {
 }
 ```
 
+### Spring Standalone Collections ##
+
+- using java collections in spring is little tricky, so Spring has adapted standalone collection technique.
+- to use standalone collection, add util schema and use name space and create collection
+```XML
+<util:CollectionName CollectionName-class="" id="">
+	<value> or <entry>
+</util>
+```
+
+- steps to use util
+	1) add util name space xmlns:util="http://www.springframework.org/schema/util" and http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd
+```XML
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+```
+	2) use utils tag to create a stand alone util
+```XML
+<util:list list-class="java.util.LinkedList" id="productNames">
+	<value>IPhone</value>
+    <value>IPad</value>
+    <value>AirPod</value>
+</util:list>
+```
+	3) give this utils object id to ref for the bean
+```XML
+<bean name="productList" class="com.fuppino.spring.standalone.collections.ProductList">
+    <property name="productNames" ref="productNames"/>
+</bean>
+```
+
+[ref]()
 
 
 

@@ -3,8 +3,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
@@ -41,4 +44,15 @@
     <bean name="model2" class="com.fuppino.spring.autowire.qualifier.Model" p:name="HR-V"/>
     
     <bean name="car" class="com.fuppino.spring.autowire.qualifier.Car"/>
+    
+    <!-- standalone collection -->
+    <util:list list-class="java.util.LinkedList" id="productNames">
+    	<value>IPhone</value>
+    	<value>IPad</value>
+    	<value>AirPod</value>
+    </util:list>
+    
+    <bean name="productList" class="com.fuppino.spring.standalone.collections.ProductList">
+    	<property name="productNames" ref="productNames"/>
+    </bean>
 </beans>
