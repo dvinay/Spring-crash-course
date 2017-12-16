@@ -1,4 +1,4 @@
-package com.fuppino.spring.injecting.interfaces;
+package com.fuppino.spring.injecting.interfaces.configuration;
 
 public class OrderBOImpl implements OrderBO {
 

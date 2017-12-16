@@ -491,10 +491,11 @@ public class Car {
 [ref](https://github.com/dvinay/Spring-crash-course/commit/0e78b317c49368126a84bec48a8201cd8d986b9b#diff-808b9c38dc8b43044f91790eae049152)
 
 ### Spring - Interface Injection ###
-- We can usee runtime polymorphism by using interface object reference to child classes
+- We can use runtime polymorphism by using interface object reference to child classes
 - to implement, this kind of runtime polymorphism. We need to use configuration changes only, not the code changes
 
-[ref]()
+
+- We can use same using annotation, with out touching configuration
 
 
 

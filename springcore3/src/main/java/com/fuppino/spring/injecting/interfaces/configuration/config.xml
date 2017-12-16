@@ -11,9 +11,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <bean class="com.fuppino.spring.injecting.interfaces.OrderDAOImpl" name="orderDAO"/>
+    <bean class="com.fuppino.spring.injecting.interfaces.configuration.OrderDAOImpl" name="orderDAO"/>
     
-    <bean class="com.fuppino.spring.injecting.interfaces.OrderBOImpl" name="orderBO">
+    <bean class="com.fuppino.spring.injecting.interfaces.configuration.OrderBOImpl" name="orderBO">
     	<property name="orderDAOImpl" ref="orderDAO"/>
     </bean>
     
