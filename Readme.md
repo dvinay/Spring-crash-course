@@ -454,7 +454,7 @@ public class Car {
 			@Value(#{cllectionId})
 		[ref](https://github.com/dvinay/Spring-crash-course/commit/75952c5cfe1a84ab13b8a753ef27ceb8f881b7b6)
 		- Object type/ref => @Autowired
-
+		[ref](https://github.com/dvinay/Spring-crash-course/commit/f0bd11c628f95ee90a3a0a45ed01583b04999c60)
 	- @Value will override the value given to the property
 ```JAVA
 	@Value(10)
