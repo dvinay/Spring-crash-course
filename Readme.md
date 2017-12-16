@@ -449,10 +449,7 @@ public class Car {
 	- to assign values to bean properties, we have to use @Value() annotation
 	- value annotation is depending on the type of data your inserting
 		- primitive data => @Value()
-		- collection data => 
-```XML
-	<util:collectionName collectionName="" id="cllectionId"/>
-```
+		- collection data => use util give util collection id in value annotation
 			@Value(#{cllectionId})
 		- Object type/ref => @Autowired
 
