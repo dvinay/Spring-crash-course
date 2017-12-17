@@ -17,6 +17,11 @@ public class Test
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
         EmployeeDAO employeeDAO = (EmployeeDAO)context.getBean("employeeDAOImpl");
         Employee employee = new Employee(2,"Ravan","Reddy");
-		System.out.println("Number of records inserted : "+employeeDAO.delete(employee));
+//        int result = employeeDAO.create(employee); 
+//        int result = employeeDAO.update(employee);
+//        int reslt = employeeDAO.delete(employee);
+//		System.out.println("Number of records inserted : "+result);
+//        System.out.println("Employee : "+employeeDAO.read(2));
+        System.out.println("Employee : "+employeeDAO.read());
     }
 }

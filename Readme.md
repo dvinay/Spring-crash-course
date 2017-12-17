@@ -534,6 +534,12 @@ public class Test
 ```
 - datasource is responsible for database connection, jdbcTemplate is responsible for query execution
 [ref](https://github.com/dvinay/Spring-crash-course/commit/9cd7c7ec32f0b9d685cadd5b39fc609930dad1c1)
+- insert, update, delete all operations in spring jdbc are similar
+- select statement has two methods, for single record and multiple records
+    - queryForObject(String sql, RowMapper<T> rowmapper, Object... args) : <T>
+	- query(String sql, RowMapper<T> rowmapper) : List<T>
+- RowMapper is an interface in Spring jdbc, it has one method called mapRow() to assign result set to corresponding Object
+
 
 
 
