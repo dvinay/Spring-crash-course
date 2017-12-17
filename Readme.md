@@ -554,12 +554,43 @@ public class Test
 - SessionFactory interface has implmented by LocalSessionFactoryBean. It requires basic information 
 	1) dataSource
 	2) hibernateProperties
-		a) dialect - depending on the database type
+		a) dialect - depending on the database type; generates sql
 		b) show_sql - to display hibernate generated queries
 	3) annotatedClasses
 		annotations from JPA - @Entity, @Table, @Id, @Column etc
 - HibernateTemplate provide basic crud method to do database operations; methods are save, update, delete, get, loadAll
 - while using these methods we don't write any sql queries, hibernate generats the sql behind the scene.
+
+- To create a spring ORM project with Hibernate ORM framework, add sping-core, context, spring-orm, hibernate-core and the db connection driver dependencies
+```XML
+<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+	</dependencies>
+```
 
 
 
