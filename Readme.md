@@ -36,76 +36,75 @@
 
 - To create a simple spring core project, add the following dependecies to your pom.xml file
 ```xml
-	<properties>
+<properties>
         <springframework.version>4.3.6.RELEASE</springframework.version>
-    </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${springframework.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${springframework.version}</version>
-        </dependency>
-    </dependencies>
+</properties>
+<dependencies>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${springframework.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${springframework.version}</version>
+    </dependency>
+</dependencies>
 ```
 - to create configuration settings (config.xml)
 ```xml
-	<?xml version="1.0" encoding="UTF-8"?>
-	<beans xmlns="http://www.springframework.org/schema/beans"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-		xmlns:p="http://www.springframework.org/schema/p"
-		xsi:schemaLocation="http://www.springframework.org/schema/beans
-	    http://www.springframework.org/schema/beans/spring-beans.xsd
-	    http://www.springframework.org/schema/context
-	    http://www.springframework.org/schema/context/spring-context.xsd">
-	</beans>
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+</beans>
 ```
 
 - Syntax to create a bean using setter DI
 ```xml
-	<bean name="emp" class="package.class.name">
-		<property name="id" value="20">
-	</bean>
+<bean name="emp" class="package.class.name">
+	<property name="id" value="20">
+</bean>
 ```
 
 - Syntax to create a bean using constructor DI
 ```xml
-	<bean name="emp" class="package.class.name">
-		<constructor-arg name="id" value="20">
-	</bean>
+<bean name="emp" class="package.class.name">
+	<constructor-arg name="id" value="20">
+</bean>
 ```
 
 - three ways to pass properties to a bean
 	- property value as values 
 		e.g:
 ```xml 
-	<bean name="employee" class="com.fuppino.spring.Employee">
-		<property name="id" value="10"></property>
-		<property name="name" value="Ram"></property>
-	</bean>
+<bean name="employee" class="com.fuppino.spring.Employee">
+	<property name="id" value="10"></property>
+	<property name="name" value="Ram"></property>
+</bean>
 ```
 
 	- property value as element
 		e.g: 
 ```xml
-	<bean name="employee" class="com.fuppino.spring.Employee">
-		<property name="id"> 
-			<value> 10 </value>
-		</property>
-		<property name="name">
-			<value> Ram </value>
-		</property>
-	</bean>
+<bean name="employee" class="com.fuppino.spring.Employee">
+	<property name="id"> 
+		<value> 10 </value>
+	</property>
+	<property name="name">
+		<value> Ram </value>
+	</property>
+</bean>
 ```
 
 	- property value with p tag
 		e.g: 
-```xml
-	<bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
+```xml<bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
 ```
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/ed33a66d5c60f88620e4cd2fb42208c896856124)
 
@@ -128,51 +127,51 @@
 	4) Properties
 	- e.g:
 ```xml
-	<bean name="employee" class="com.fuppino.spring.Employee">
-		<property name="data"> 
-			<props>
-				<prop key="USA">English</prop>
-				<prop key="INDIA">Hindi</prop>
-			</props>
-		</property>
-	</bean>
+<bean name="employee" class="com.fuppino.spring.Employee">
+	<property name="data"> 
+		<props>
+			<prop key="USA">English</prop>
+			<prop key="INDIA">Hindi</prop>
+		</props>
+	</property>
+</bean>
 ```
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/357b6eeeb2d23ac2d3da4ef1c27e653b4a0906e3)
 
 - Spring supports has a relationship bean dependencies with ref tag
 	e.g:
 ```xml
-	<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
-	<bean name="student" class="com.fuppino.spring.reftype.Student">
-		<property name="name" value="Ram"/>
-		<property name="score" ref="scores"/>
-	</bean>
+<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
+<bean name="student" class="com.fuppino.spring.reftype.Student">
+	<property name="name" value="Ram"/>
+	<property name="score" ref="scores"/>
+</bean>
 ```
 
 - for ref beans also we can use 3 types of syntax
 	1) ref as property value
 ```XML
-	<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
-	<bean name="student" class="com.fuppino.spring.reftype.Student">
-		<property name="name" value="Ram"/>
-		<property name="score" ref="scores"/>
-	</bean>
+<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
+<bean name="student" class="com.fuppino.spring.reftype.Student">
+	<property name="name" value="Ram"/>
+	<property name="score" ref="scores"/>
+</bean>
 ```
 	2) ref as property element
 ```XML
-	<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
-	<bean name="student" class="com.fuppino.spring.reftype.Student">
-		<property name="name" value="Ram"/>
-		<property name="score">
-			<ref bean="scores"/>
-		</property>
-	</bean>
+<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
+<bean name="student" class="com.fuppino.spring.reftype.Student">
+	<property name="name" value="Ram"/>
+	<property name="score">
+		<ref bean="scores"/>
+	</property>
+</bean>
 ```
 	3) ref value with p tag using object_name-ref
 
 ```XML
-	<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
-	<bean name="student" class="com.fuppino.spring.reftype.Student" p:name="Ram" p:score-ref="scores"/>
+<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
+<bean name="student" class="com.fuppino.spring.reftype.Student" p:name="Ram" p:score-ref="scores"/>
 ```
 
 ### Spring bean life cycle methods ###
@@ -190,7 +189,7 @@
 - Three ways to configure the lifecycle method
 	1) XML Configuration - init-method & destroy-method
 ```XML
-	<bean name="item" class="com.fuppino.spring.lc.xmlconfig.Item" p:id="23" init-method="init" destroy-method="destroy"/>
+<bean name="item" class="com.fuppino.spring.lc.xmlconfig.Item" p:id="23" init-method="init" destroy-method="destroy"/>
 ```
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/ae2d8ca26467240d9e27eb99c04f251c267fafa8)
 
@@ -206,7 +205,7 @@
 		
 		- add CommonAnnotationBeanPostProcessor bean class to config.xml , it only supports PostConstruct and PreDestroy annotations
 ```XML
-	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
 ```
 		[ref](https://github.com/dvinay/Spring-crash-course/commit/9b5f5b2f4eced2025479d4e9fc4829c0a179b1b2)
 		
@@ -214,7 +213,7 @@
 		- annotation-config support all the annotations
 		- add 
 ```XML
-	<context:annotation-config/>
+<context:annotation-config/>
 ```
 		[ref](https://github.com/dvinay/Spring-crash-course/commit/db20a49b702fb924bfc64376599c09adb2c0569a)
 
@@ -232,9 +231,9 @@ e.g:
 
 ```xml
 <bean name="employee" class="com.fuppino.spring.innerbean.Employee" p:name="Ram">
-		<property name="address">
-			<bean class="com.fuppino.spring.innerbean.Address" p:cityName="Fremont"/>
-		</property>
+	<property name="address">
+		<bean class="com.fuppino.spring.innerbean.Address" p:cityName="Fremont"/>
+	</property>
 </bean>
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/6470843f274fb07ccbbf5b5eaf3796f83fe1259c)
@@ -249,9 +248,9 @@ e.g:
 
 ```xml
 <bean name="employee" class="com.fuppino.spring.innerbean.Employee" p:name="Ram" scope="prototype">
-		<property name="address">
-			<bean class="com.fuppino.spring.innerbean.Address" p:cityName="Fremont"/>
-		</property>
+	<property name="address">
+		<bean class="com.fuppino.spring.innerbean.Address" p:cityName="Fremont"/>
+	</property>
 </bean>
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/2d3d4ce9707c9d1bb73144c043dc771caa8f2977)
@@ -558,31 +557,31 @@ public class Test
 - To create a spring ORM project with Hibernate ORM framework, add sping-core, context, spring-orm, hibernate-core and the db connection driver dependencies
 ```XML
 <dependencies>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${springframework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${springframework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${springframework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>${hibernate.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.6</version>
-		</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>${springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>${springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>${hibernate.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.6</version>
+	</dependency>
 </dependencies>
 ```
 - To configure Hibernate ORM in spring configuration xml
