@@ -645,7 +645,7 @@ public class Test
 	c) View Resolver
 - Spring MVC web application follows the followin flow
 	1) client request comes
-	2) Dispatcher servlet handles the request 
+	2) Dispatcher servlet handles the request
 		- it's from spring mvc framework, we use and configure it
 	    - it created based on Front controller design pattern
 		- we have to configure this in deployement descripter of a web application
@@ -662,11 +662,29 @@ public class Test
 	7) dispatcher servlet display the end result
 - to create spring MVC project using maven, add spring-webmvc dependecy
 - Steps to create a simple dynamic web application using Spring MVC
-	- Configure the dispatcher servlet
-	- Create the spring configuration
-	- Configure the view resolver
-	- Create the Controller
-	- Create the folder structure and view
+	1) Configure the dispatcher servlet
+	2) Create the spring configuration
+	3) Configure the view resolver
+	4) Create the Controller
+	5) Create the folder structure and view
+	
+- To configure dispatcher servlet in web.xml
+```XML
+<servlet>
+	<servlet-name>dispatcher</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	<init-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>location</param-value>
+	</init-param>
+	<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>dispatcher</servlet-name>
+	<url-pattern>/</url-pattern>
+</servlet-mapping>
+```
+
 
 
 
