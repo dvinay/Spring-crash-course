@@ -539,7 +539,7 @@ public class Test
     - queryForObject(String sql, RowMapper<T> rowmapper, Object... args) : <T>
 	- query(String sql, RowMapper<T> rowmapper) : List<T>
 - RowMapper is an interface in Spring jdbc, it has one method called mapRow() to assign result set to corresponding Object
-
+[ref](https://github.com/dvinay/Spring-crash-course/commit/888758e43d49074765ffd579e93e1d0114ea43ab)
 
 
 
