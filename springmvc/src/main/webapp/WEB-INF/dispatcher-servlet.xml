@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <context:component-scan base-package="com.fuppino.spring.springmvc"/>
+    <context:component-scan base-package="com.fuppino.spring.springmvc.controller"/>
     
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" name="viewResolver">
 		<property name="prefix">
