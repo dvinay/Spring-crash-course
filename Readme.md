@@ -82,31 +82,31 @@
 - three ways to pass properties to a bean
 	- property value as values 
 		e.g:
-		```xml 
-			<bean name="employee" class="com.fuppino.spring.Employee">
-				<property name="id" value="10"></property>
-			 	<property name="name" value="Ram"></property>
-			 </bean>
-		```
+```xml 
+	<bean name="employee" class="com.fuppino.spring.Employee">
+		<property name="id" value="10"></property>
+		<property name="name" value="Ram"></property>
+	</bean>
+```
 
 	- property value as element
 		e.g: 
-		```xml
-		<bean name="employee" class="com.fuppino.spring.Employee">
-				<property name="id"> 
-					<value> 10 </value>
-				</property>
-				<property name="name">
-					<value> Ram </value>
-				</property>
-		</bean>
-		```
+```xml
+	<bean name="employee" class="com.fuppino.spring.Employee">
+		<property name="id"> 
+			<value> 10 </value>
+		</property>
+		<property name="name">
+			<value> Ram </value>
+		</property>
+	</bean>
+```
 
 	- property value with p tag
 		e.g: 
-		```xml
-		<bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
-		```
+```xml
+	<bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
+```
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/ed33a66d5c60f88620e4cd2fb42208c896856124)
 
 - Spring supports 4 types of collections as dependecies
@@ -127,7 +127,7 @@
 
 	4) Properties
 	- e.g:
-	```xml
+```xml
 	<bean name="employee" class="com.fuppino.spring.Employee">
 		<property name="data"> 
 			<props>
@@ -136,49 +136,44 @@
 			</props>
 		</property>
 	</bean>
-	```
+```
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/357b6eeeb2d23ac2d3da4ef1c27e653b4a0906e3)
 
 - Spring supports has a relationship bean dependencies with ref tag
 	e.g:
-	```xml
+```xml
 	<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 	<bean name="student" class="com.fuppino.spring.reftype.Student">
 		<property name="name" value="Ram"/>
 		<property name="score" ref="scores"/>
 	</bean>
-	```
+```
 
 - for ref beans also we can use 3 types of syntax
-		
-		1) ref as property value
+	1) ref as property value
+```XML
+	<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
+	<bean name="student" class="com.fuppino.spring.reftype.Student">
+		<property name="name" value="Ram"/>
+		<property name="score" ref="scores"/>
+	</bean>
+```
+	2) ref as property element
+```XML
+	<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
+	<bean name="student" class="com.fuppino.spring.reftype.Student">
+		<property name="name" value="Ram"/>
+		<property name="score">
+			<ref bean="scores"/>
+		</property>
+	</bean>
+```
+	3) ref value with p tag using object_name-ref
 
-		```xml
-		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
-		<bean name="student" class="com.fuppino.spring.reftype.Student">
-			<property name="name" value="Ram"/>
-			<property name="score" ref="scores"/>
-		</bean>
-		```
-
-		2) ref as property element
-
-		```xml
-		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
-		<bean name="student" class="com.fuppino.spring.reftype.Student">
-			<property name="name" value="Ram"/>
-			<property name="score">
-				<ref bean="scores"/>
-			</property>
-		</bean>
-		```
-
-		3) ref value with p tag using object_name-ref
-
-		```xml
-		<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
-		<bean name="student" class="com.fuppino.spring.reftype.Student" p:name="Ram" p:score-ref="scores"/>
-		```
+```XML
+	<bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
+	<bean name="student" class="com.fuppino.spring.reftype.Student" p:name="Ram" p:score-ref="scores"/>
+```
 
 ### Spring bean life cycle methods ###
 - Spring provides two life cycle methods for every bean it creates
@@ -194,9 +189,9 @@
 	
 - Three ways to configure the lifecycle method
 	1) XML Configuration - init-method & destroy-method
-	```xml
-		<bean name="item" class="com.fuppino.spring.lc.xmlconfig.Item" p:id="23" init-method="init" destroy-method="destroy"/>
-	```
+```XML
+	<bean name="item" class="com.fuppino.spring.lc.xmlconfig.Item" p:id="23" init-method="init" destroy-method="destroy"/>
+```
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/ae2d8ca26467240d9e27eb99c04f251c267fafa8)
 
 	2) implementing interfaces - InitializingBean & DisposableBean
@@ -210,18 +205,17 @@
 		- add @PostConstruct, @PreDestroy annotations before the init and destroy methods
 		
 		- add CommonAnnotationBeanPostProcessor bean class to config.xml , it only supports PostConstruct and PreDestroy annotations
-		```xml
-		<bean
-		class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
-		```
+```XML
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+```
 		[ref](https://github.com/dvinay/Spring-crash-course/commit/9b5f5b2f4eced2025479d4e9fc4829c0a179b1b2)
 		
 		(or)
 		- annotation-config support all the annotations
 		- add 
-		```xml
-		<context:annotation-config/>
-		```
+```XML
+	<context:annotation-config/>
+```
 		[ref](https://github.com/dvinay/Spring-crash-course/commit/db20a49b702fb924bfc64376599c09adb2c0569a)
 
 ### Spring dependency check ###
