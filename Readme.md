@@ -666,10 +666,6 @@ public class Test
 <servlet>
 	<servlet-name>dispatcher</servlet-name>
 	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-	<init-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>location</param-value>
-	</init-param>
 	<load-on-startup>1</load-on-startup>
 </servlet>
 <servlet-mapping>
