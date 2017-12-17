@@ -30,4 +30,16 @@ public class ProductDAOImpl implements ProductDAO {
 		Integer result = (Integer) hibernateTemplate.save(product);
 		return result;
 	}
+
+	@Override
+	@Transactional
+	public void update(Product product) {
+		hibernateTemplate.update(product);
+	}
+
+	@Override
+	@Transactional
+	public void delete(Product product) {
+		hibernateTemplate.delete(product);
+	}
 }

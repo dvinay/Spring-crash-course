@@ -11,10 +11,12 @@ public class Test {
 		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
 		ProductDAO productDAO = (ProductDAO) context.getBean("productDAO");
 		Product product = new Product();
-		product.setId(1);
+		product.setId(2);
 		product.setName("IPhone");
 		product.setDesc("apple iphone phone");;
-		product.setPrice(700);
-		productDAO.create(product);
+		product.setPrice(800);
+//		productDAO.create(product);
+//		productDAO.update(product);
+		productDAO.delete(product);
 	}
 }
