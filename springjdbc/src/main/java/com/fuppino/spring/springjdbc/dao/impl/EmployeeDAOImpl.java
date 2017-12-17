@@ -15,7 +15,21 @@ public class EmployeeDAOImpl implements EmployeeDAO{
         int resultCount = jdbcTemplate.update(sql, employee.getId(), employee.getFirstName(), employee.getLastName());
         return resultCount;
 	}
+	
+	@Override
+	public int update(Employee employee) {
+		String sql = "UPDATE EMPLOYEE SET firstname=?, lastname=? WHERE ID = ?";
+        int resultCount = jdbcTemplate.update(sql, employee.getFirstName(), employee.getLastName(),employee.getId());
+        return resultCount;
+	}
 
+	@Override
+	public int delete(Employee employee) {
+		String sql = "DELETE FROM EMPLOYEE WHERE ID = ?";
+        int resultCount = jdbcTemplate.update(sql, employee.getId());
+        return resultCount;
+	}
+	
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
@@ -23,6 +37,4 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
 	}
-	
-	
 }
