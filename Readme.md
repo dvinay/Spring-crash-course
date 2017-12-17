@@ -598,7 +598,7 @@ public class Test
 		p:username="root" p:password="root" />
 
 <bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
-		name="sessionFactory" p:dataSource="dataSource">
+		name="sessionFactory" p:dataSource-ref="dataSource">
 	<property name="hibernateProperties">
 		<props>
 			<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
@@ -617,6 +617,17 @@ public class Test
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/51e2c0960ef74fa6e1c2dbd28893bb3b8acc3b93#diff-048dfe4f4f7379a37b4b993e9ef75f07)
 
+- Transaction Managent is used to autonomous work in db operation
+- Hibernate uses HibernateTransactionManager class to provide transactions, add tx:annotaion-driven in configuration and use @Transactional for the db operation
+```XML
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd"
+	
+	<tx:annotation-driven/>
 
+	<bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" 
+		name="transactionManager" p:sessionFactory-ref="sessionFactory"/>
+```
 
 
