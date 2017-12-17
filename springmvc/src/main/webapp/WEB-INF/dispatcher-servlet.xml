@@ -6,5 +6,13 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-    		
+    
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" name="viewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/views/</value>
+		</property>    
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+    </bean>	
 </beans>

@@ -686,7 +686,8 @@ public class Test
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/e660a30f36eb6d0db34fbdba7bdd49c4500a41bd#diff-69e92c6bb92c24d459319b5f291f1a13)
 
-- to configure the spring mvc xml file, name must be the servlet-name in web.xml with sufix servlet
+- to configure the spring mvc xml file and view resolver; add prefix - location for the view files and sufix - extenstion of view files
+
 
 
 
