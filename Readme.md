@@ -689,6 +689,8 @@ public class Test
 - to configure the spring mvc xml file and view resolver; add prefix - location for the view files and sufix - extenstion of view files
 [ref](https://github.com/dvinay/Spring-crash-course/commit/c6713a74162097a2fca43aae34c5bb948a0528c8#diff-86df5f35603ce54b1e67a3ebd5df90c5)
 
+- to create controller, @Controller and @RequestMapping("url") are the important annotations. controller at class level to inform spring to create a bean and RequestMapping to map the function to corresponding url pattern
+[ref](https://github.com/dvinay/Spring-crash-course/commit/b464e6a25de56f9b2863a07b992bcae9cfe717ea)
 
 
 
