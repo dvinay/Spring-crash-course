@@ -591,7 +591,30 @@ public class Test
 		</dependency>
 	</dependencies>
 ```
+- To configure Hibernate ORM in spring configuration xml
+```XML
+<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		name="dataSource" p:driverClassName="com.mysql.jdbc.Driver" p:url="jdbc:mysql://localhost:8889/mydb"
+		p:username="root" p:password="root" />
 
+<bean class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
+		name="sessionFactory" p:dataSource="dataSource">
+	<property name="hibernateProperties">
+		<props>
+			<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+			<prop key="hibernate.show_sql">true</prop>
+		</props>
+	</property>
+	<property name="annotatedClasses">
+		<list>
+			<value>com.fuppino.spring.springorm.product.entity.Product</value>
+		</list>
+	</property>
+</bean>
+
+<bean class="org.springframework.orm.hibernate5.HibernateTemplate"
+		name="hibernateTemplate" p:sessionFactory-ref="sessionFactory" />
+```
 
 
 
