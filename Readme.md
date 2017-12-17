@@ -667,7 +667,7 @@ public class Test
 	3) Configure the view resolver
 	4) Create the Controller
 	5) Create the folder structure and view
-	
+
 - To configure dispatcher servlet in web.xml
 ```XML
 <servlet>
@@ -684,8 +684,8 @@ public class Test
 	<url-pattern>/</url-pattern>
 </servlet-mapping>
 ```
-
-
+[ref](https://github.com/dvinay/Spring-crash-course/commit/e660a30f36eb6d0db34fbdba7bdd49c4500a41bd#diff-69e92c6bb92c24d459319b5f291f1a13)
+- 
 
 
 
