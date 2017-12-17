@@ -660,7 +660,13 @@ public class Test
 		- view - file name
 		- suffix - file extension like jsp, html, jsf
 	7) dispatcher servlet display the end result
-
+- to create spring MVC project using maven, add spring-webmvc dependecy
+- Steps to create a simple dynamic web application using Spring MVC
+	- Configure the dispatcher servlet
+	- Create the spring configuration
+	- Configure the view resolver
+	- Create the Controller
+	- Create the folder structure and view
 
 
 
