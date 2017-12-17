@@ -541,6 +541,26 @@ public class Test
 - RowMapper is an interface in Spring jdbc, it has one method called mapRow() to assign result set to corresponding Object
 [ref](https://github.com/dvinay/Spring-crash-course/commit/888758e43d49074765ffd579e93e1d0114ea43ab)
 
+### Spring ORM ###
+- ORM - Object Relational Mapping, It maps the programming object to database table and vice versa.
+- J2EE standrad for doing ORM is JPA - Java Persistance API, it contains two parts
+	1) API
+	2) Specification
+- Implementations of JPA are Hibernate, toplink, eclipselink
+- Spring provides class called HibernateTemplate to support the Hibernate ORM.
+- Hibernate ORM requires SessionFactory object to do SQL operations
+- SessionFactory need datasource
+- HibernateTemplate -> SessionFactory -> dataSource
+- SessionFactory interface has implmented by LocalSessionFactoryBean. It requires basic information 
+	1) dataSource
+	2) hibernateProperties
+		a) dialect - depending on the database type
+		b) show_sql - to display hibernate generated queries
+	3) annotatedClasses
+		annotations from JPA - @Entity, @Table, @Id, @Column etc
+- HibernateTemplate provide basic crud method to do database operations; methods are save, update, delete, get, loadAll
+- while using these methods we don't write any sql queries, hibernate generats the sql behind the scene.
+
 
 
 
