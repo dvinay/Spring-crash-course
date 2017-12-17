@@ -637,6 +637,30 @@ public class Test
 -for select one record and multiple records 
 [ref](https://github.com/dvinay/Spring-crash-course/commit/469114e5ec835006562c7e528b020e234a90fc32)
 
+### Spring MVC ###
+- Spring MVC is used to design dynamic web applications.
+- It internally uses three desgin patterns
+	a) Front Controller
+	b) Handler Mapper
+	c) View Resolver
+- Spring MVC web application follows the followin flow
+	1) client request comes
+	2) Dispatcher servlet handles the request 
+		- it's from spring mvc framework, we use and configure it
+	    - it created based on Front controller design pattern
+		- we have to configure this in deployement descripter of a web application
+		- It uses Handler Mapper to map the request to corresponding controller based on url
+	3) Controller
+		- A class can be controller by adding @Controller annotation
+		- we implement method to generate model and view
+	4) model and view returns to Dispatcher Servlet
+	5) dispatcher servlet invokes view resolver
+	6) view resolver appends prefix, view, suffix 
+		- prefix - location of view files
+		- view - file name
+		- suffix - file extension like jsp, html, jsf
+	7) dispatcher servlet display the end result
+
 
 
 
