@@ -509,7 +509,29 @@ public class Car {
 - Spring provides a implementation class for DataSource called DriverManagerDataSource; we will create this bean in spring configuration
 - DriverManagerDataSource takes 4 parameters, dirverClassName, url, userName, password
 - JDBCTemplate provides couple of methods for sql operations
-
+- To create a spring jdbc project, we need to add DriverManagerDataSource bean in configuration xml and pass it to JDBCTemplate bean.
+```XML
+<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
+    		name="dataSource"
+    		p:driverClassName="com.mysql.jdbc.Driver"
+    		p:url="jdbc:mysql://localhost:8889/mydb"
+    		p:username="root"
+			p:password="root"/>
+<bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbcTemplate" p:dataSource-ref="dataSource"/>
+```
+```JAVA
+public class Test 
+{
+    public static void main( String[] args )
+    {
+        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        JdbcTemplate jdbcTemplate = (JdbcTemplate)context.getBean("jdbcTemplate");
+        String sql = "INSERT INTO EMPLOYEE VALUES(?,?,?)";
+        int resultCount = jdbcTemplate.update(sql, new Integer(1), "Ram", "Reddy");
+        System.out.println("Number of records inserted : "+resultCount);
+    }
+}
+```
 
 
 
