@@ -589,7 +589,7 @@ public class Test
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.6</version>
 		</dependency>
-	</dependencies>
+</dependencies>
 ```
 - To configure Hibernate ORM in spring configuration xml
 ```XML
@@ -615,8 +615,7 @@ public class Test
 <bean class="org.springframework.orm.hibernate5.HibernateTemplate"
 		name="hibernateTemplate" p:sessionFactory-ref="sessionFactory" />
 ```
-
-
+[ref](https://github.com/dvinay/Spring-crash-course/commit/51e2c0960ef74fa6e1c2dbd28893bb3b8acc3b93#diff-048dfe4f4f7379a37b4b993e9ef75f07)
 
 
 
