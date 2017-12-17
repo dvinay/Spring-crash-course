@@ -632,7 +632,8 @@ public class Test
 ```
 - for insert operation
 [ref](https://github.com/dvinay/Spring-crash-course/commit/b8294e5eac75343178725801c75228b643ad0ce5)
-
+- for update or delete operation
+[ref](https://github.com/dvinay/Spring-crash-course/commit/922a15180fdb1c134e259363499b8035184c34c0)
 
 
 

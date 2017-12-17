@@ -1,6 +1,6 @@
 package com.fuppino.spring.springorm.product.dao.impl;
 
-import java.io.Serializable;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -41,5 +41,17 @@ public class ProductDAOImpl implements ProductDAO {
 	@Transactional
 	public void delete(Product product) {
 		hibernateTemplate.delete(product);
+	}
+
+	@Override
+	public Product read(int id) {
+		Product product = hibernateTemplate.get(Product.class,id);
+		return product;
+	}
+
+	@Override
+	public List<Product> readALL() {
+		List<Product> products = hibernateTemplate.loadAll(Product.class);
+		return products;
 	}
 }
