@@ -713,6 +713,7 @@ public class Test
 - request url: http://localhost:8080/springmvc/registrationPage
 Flow -> 
 /registrationPage -> UserController, showRegistrationPage() -> display the view userreg.jsp -> form submission - Http POST method -> registerUser(@ModelAttribute("form model"))
+[ref](https://github.com/dvinay/Spring-crash-course/commit/d5fc204908b4af6a2f9f2b68c7f8eb049707083a)
 
 
 
