@@ -685,7 +685,7 @@ public class Test
 - ModelAndView object act as a medium between Spring controller component and UI view.
 - to send data, we need to use addObject method to add the data in the format of key and value
 - modelandview.addObject('key-string','value-object');
-
+[ref](https://github.com/dvinay/Spring-crash-course/commit/1fdbe9f14e51a2100d5d84b286721af843f4bcc2)
 
 
 
