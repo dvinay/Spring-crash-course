@@ -685,7 +685,14 @@ public class Test
 - ModelAndView object act as a medium between Spring controller component and UI view.
 - to send data, we need to use addObject method to add the data in the format of key and value
 - modelandview.addObject('key-string','value-object');
+- we can retrive the data in ui component is using request.getAttribute()
 [ref](https://github.com/dvinay/Spring-crash-course/commit/1fdbe9f14e51a2100d5d84b286721af843f4bcc2)
+- another way to retrive the data in ui component is using jsp Expression Language like ${objectname}
+- Note: to enable jsp expression language add following line at top in jsp page
+```XML
+<%@ page isELIgnored="false" %>
+```
+
 
 
 
