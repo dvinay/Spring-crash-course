@@ -700,6 +700,19 @@ public class Test
 - request url: http://localhost:8080/springmvc/readList
 [ref](https://github.com/dvinay/Spring-crash-course/commit/877a8bc314ec430451064bf1567e8856f81a8bf2)
 
+### Spring MVC -Sending data from UI to Controller ###
+- There are two ways to send data from UI to Controller,
+	- HTML Form
+	- Query Parameters
+- When Html form has submitted, the spring container converts and create a new model object and set the values. We have to use @ModelAttribute on our controller method parameters
+- Steps to create HTML form submission
+	- Create a Model object
+	- Create a HTML form with field names like model fields
+	- Create a controller with same URI like form in html
+	- Add @ModelAttribute("model-name") as parameter in the controller post operation method
+- request url: http://localhost:8080/springmvc/registrationPage
+Flow -> 
+/registrationPage -> UserController, showRegistrationPage() -> display the view userreg.jsp -> form submission - Http POST method -> registerUser(@ModelAttribute("form model"))
 
 
 
