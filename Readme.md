@@ -681,6 +681,11 @@ public class Test
 - to create controller, @Controller and @RequestMapping("url") are the important annotations. controller at class level to inform spring to create a bean and RequestMapping to map the function to corresponding url pattern
 [ref](https://github.com/dvinay/Spring-crash-course/commit/b464e6a25de56f9b2863a07b992bcae9cfe717ea)
 
+### Spring MVC -Sending data from Controller to UI ###
+- ModelAndView object act as a medium between Spring controller component and UI view.
+- to send data, we need to use addObject method to add the data in the format of key and value
+- modelandview.addObject('key-string','value-object');
+
 
 
 

@@ -1,5 +1,10 @@
 <html>
 <body>
-<h1>Welcome to Spring MVC</h1>
+	<%
+		Integer id = (Integer) request.getAttribute("id");
+		String name = (String) request.getAttribute("name");
+		Integer salary = (Integer) request.getAttribute("salary");
+		out.print("Id : " + id +" Name : " + name + " Salary : " + salary);
+	%>
 </body>
 </html>
