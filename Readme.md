@@ -698,6 +698,7 @@ public class Test
 - request url: http://localhost:8080/springmvc/readObject
 [ref](https://github.com/dvinay/Spring-crash-course/commit/48a1985e31a1c224a9df19ffeb2c23edcc5d68ca)
 - request url: http://localhost:8080/springmvc/readList
+[ref](https://github.com/dvinay/Spring-crash-course/commit/877a8bc314ec430451064bf1567e8856f81a8bf2)
 
 
 
