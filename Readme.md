@@ -694,8 +694,10 @@ public class Test
 <%@ page isELIgnored="false" %>
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/122e9388d1178f44e17bc3581151f4a065c1642f)
-- request url: http://localhost:8080/springmvc/readObject
 
+- request url: http://localhost:8080/springmvc/readObject
+[ref](https://github.com/dvinay/Spring-crash-course/commit/48a1985e31a1c224a9df19ffeb2c23edcc5d68ca)
+- request url: http://localhost:8080/springmvc/readList
 
 
 
