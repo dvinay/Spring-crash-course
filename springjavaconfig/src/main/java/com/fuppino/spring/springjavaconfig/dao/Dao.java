@@ -1,4 +1,4 @@
-package com.fuppino.spring.springjavaconfig;
+package com.fuppino.spring.springjavaconfig.dao;
 
 import org.springframework.stereotype.Component;
 

@@ -834,9 +834,43 @@ public class Test
 }
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/38150b2d3b2e6beca7f6e10574ca9060dc83fdbc)
-
 - you can define multiple beans with @Bean annotation to create
-
+[ref](https://github.com/dvinay/Spring-crash-course/commit/7b6f4fe1f39244f4fc4f87cbe3e208ff493ffbf9)
+- If we want to split the configuration into multiplie classes, then we need to use @Import annotation in main configuration to create beans in another classes
+```JAVA
+// first configuration
+@Configuration
+public class DaoConfig 
+{
+    @Bean
+    public Dao dao() {
+    	return new Dao();
+    }
+}
+//main configuration
+@Configuration
+@Import(DaoConfig.class)
+public class SpringConfig 
+{   
+    @Bean
+    public Service service(){
+    	return new Service();
+    }
+}
+//Test class
+public class Test 
+{
+    public static void main( String[] args )
+    {
+        AnnotationConfigApplicationContext config = new AnnotationConfigApplicationContext(SpringConfig.class);
+        Dao dao = config.getBean(Dao.class);
+        dao.create();
+        
+        Service service = config.getBean(Service.class);
+        service.save();
+    }
+}
+```
 
 
 
