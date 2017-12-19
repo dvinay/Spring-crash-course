@@ -8,7 +8,7 @@ import com.fuppino.spring.springmvcorm.user.dao.UserDao;
 import com.fuppino.spring.springmvcorm.user.entity.User;
 
 @Repository
-public class UserDaoImple implements UserDao {
+public class UserDaoImpl implements UserDao {
 	@Autowired
 	HibernateTemplate hibernateTemplate;
 
