@@ -717,7 +717,11 @@ Flow ->
 
 - When data transfer throug Query Parameters like URI?key=value&key=value..
 - the key and value can be fetched in spring by using @RequestParam("key") DataType methodParam.
-
+- spring uses request.getParamet("key") and parse the data and inject it to controller method as @RequestParam("key")
+- If invalid data comes then spring throughs 400 error code
+- If key is not provides by default, spring throughs 400 error code. To control this we use required=false and defaltValue parameters in @RequestParam
+- The order of key doesn't matter
+- request url: http://localhost:8080/springmvc/showData?id=123&name=temp&email=temp@gmail.com
 
 
 
