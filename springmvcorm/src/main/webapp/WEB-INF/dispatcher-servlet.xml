@@ -10,9 +10,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<tx:annotation-driven />
-	<context:component-scan base-package="com.fuppino.spring.springmvc.controller" />
 
+	<context:component-scan base-package="com.fuppino.spring.springmvcorm.*"/>
+	<tx:annotation-driven />
+		
 	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		name="dataSource" p:driverClassName="com.mysql.jdbc.Driver" p:url="jdbc:mysql://localhost:8889/mydb"
 		p:username="root" p:password="root" />
@@ -27,7 +28,7 @@
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.fuppino.spring.springorm.product.entity.Product</value>
+				<value>com.fuppino.spring.springmvcorm.user.entity.User</value>
 			</list>
 		</property>
 	</bean>

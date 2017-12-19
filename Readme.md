@@ -731,6 +731,7 @@ public class Test
 [ref](https://github.com/dvinay/Spring-crash-course/commit/e6d7f763f244d6dfa4b5484bcabb64a94c937793)
 
 ### Spring MVC - DB Connection using ORM ###
-- 
+- request url: http://localhost:8080/springmvcorm/registerUser
+
 
 
