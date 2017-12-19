@@ -788,16 +788,16 @@ public class Test
     <version>1.6.11</version>
 </dependency>
 ```
-- to configure the aop anotation, add aop nameschema and add aspect-autoproxy tag
+- to configure the aop anotation, add aop nameschema and add aspect-autoproxy tag and create aspect bean in spring bean class
 ```XML
 xmlns:aop = "http://www.springframework.org/schema/aop"
 xsi:schemaLocation = http://www.springframework.org/schema/aop
     http://www.springframework.org/schema/aop/spring-aop.xsd
 
 <aop:aspectj-autoproxy/>
-
 ```
--
+- autoproxy scans the all the classes with @Aspect annotation
+- create Aspect class object in spring bean
 
 
 
