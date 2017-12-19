@@ -734,4 +734,6 @@ public class Test
 - request url: http://localhost:8080/springmvcorm/registerUser
 [ref](https://github.com/dvinay/Spring-crash-course/commit/2da26efa99bd7463297fce735a13785fd8633db4)
 
-
+### Client and Server Communication ###
+- Synchronous -> client will request to server and wait until get response
+- ASynchronous -> client will request to server and don't wait to get response
