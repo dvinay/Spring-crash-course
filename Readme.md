@@ -715,6 +715,8 @@ Flow ->
 /registrationPage -> UserController, showRegistrationPage() -> display the view userreg.jsp -> form submission - Http POST method -> registerUser(@ModelAttribute("form model"))
 [ref](https://github.com/dvinay/Spring-crash-course/commit/d5fc204908b4af6a2f9f2b68c7f8eb049707083a)
 
+- When data transfer throug Query Parameters like URI?key=value&key=value..
+- the key and value can be fetched in spring by using @RequestParam("key") DataType methodParam.
 
 
 
