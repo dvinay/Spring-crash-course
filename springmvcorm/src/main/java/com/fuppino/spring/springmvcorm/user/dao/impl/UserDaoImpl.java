@@ -32,5 +32,10 @@ public class UserDaoImpl implements UserDao {
 	public List<User> findUsers() {
 		List<User> users = hibernateTemplate.loadAll(User.class);
 		return users;
+	}
+
+	@Override
+	public User findUser(int id) {
+		return hibernateTemplate.get(User.class,id);
 	} 
 }

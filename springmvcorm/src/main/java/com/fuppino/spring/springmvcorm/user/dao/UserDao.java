@@ -5,6 +5,7 @@ import java.util.List;
 import com.fuppino.spring.springmvcorm.user.entity.User;
 
 public interface UserDao {
-	int create(User user);
+	int create(User user);	
+	User findUser(int id);
 	List<User> findUsers();
 }
