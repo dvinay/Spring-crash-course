@@ -730,6 +730,7 @@ public class Test
 - Instead of using ModelAndView object and using, we can divide data and view. ModelMap parameter and view name as string return statement.
 [ref](https://github.com/dvinay/Spring-crash-course/commit/e6d7f763f244d6dfa4b5484bcabb64a94c937793)
 
-
+### Spring MVC - DB Connection using ORM ###
+- 
 
 
