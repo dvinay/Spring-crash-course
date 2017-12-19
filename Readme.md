@@ -725,7 +725,9 @@ public class Test
 [ref](https://github.com/dvinay/Spring-crash-course/commit/f61b929887b876d7684f1b364948de7978319085)
 - if field is not manadatory, we can add required=fasle and defaultValue
 - request url: http://localhost:8080/springmvc/showData?name=temp&email=temp
-[ref]()
+[ref](https://github.com/dvinay/Spring-crash-course/commit/352ad25dd9b242a147c50af9ae0ec262cd384af7)
+
+- Instead of using ModelAndView object and using, we can divide data and view. ModelMap parameter and view name as string return statement.
 
 
 
