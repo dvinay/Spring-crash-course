@@ -800,6 +800,40 @@ xsi:schemaLocation = http://www.springframework.org/schema/aop
 - create Aspect class object in spring bean
 [ref](https://github.com/dvinay/Spring-crash-course/commit/5513054d2e28383fc1131c453e548077bb6a3fc6)
 
+### Spring Annotation Configuration ###
+- Spring 3.0 above version supports the configuration as a class and annotation instead of xml file
+- Spring uses @Configure annotation to provide a class as configuration; and @Bean to create bean in configuration class file
+- Use can use AnnotationConfigApplicationContext class to load configuration class; if we have multiple classes as configuration we can use register method to register multiple classes
+```Java
+//Bean class
+@Component
+public class Dao 
+{
+    public void create() {
+    	System.out.println("created");
+    }
+}
+//Configuration class
+@Configuration
+public class SpringConfig 
+{
+    @Bean
+    public Dao dao(){
+    	return new Dao();
+    }
+}
+//Test class
+public class Test 
+{
+    public static void main( String[] args )
+    {
+        AnnotationConfigApplicationContext config = new AnnotationConfigApplicationContext(SpringConfig.class);
+        Dao dao = config.getBean(Dao.class);
+        dao.create();
+    }
+}
+```
+
 
 
 
