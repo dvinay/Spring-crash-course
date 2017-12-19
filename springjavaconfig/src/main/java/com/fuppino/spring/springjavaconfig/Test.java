@@ -9,5 +9,8 @@ public class Test
         AnnotationConfigApplicationContext config = new AnnotationConfigApplicationContext(SpringConfig.class);
         Dao dao = config.getBean(Dao.class);
         dao.create();
+        
+        Service service = config.getBean(Service.class);
+        service.save();
     }
 }

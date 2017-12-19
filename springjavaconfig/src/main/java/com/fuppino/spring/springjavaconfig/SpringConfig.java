@@ -10,4 +10,9 @@ public class SpringConfig
     public Dao dao(){
     	return new Dao();
     }
+    
+    @Bean
+    public Service service(){
+    	return new Service();
+    }
 }

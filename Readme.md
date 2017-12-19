@@ -833,6 +833,9 @@ public class Test
     }
 }
 ```
+[ref](https://github.com/dvinay/Spring-crash-course/commit/38150b2d3b2e6beca7f6e10574ca9060dc83fdbc)
+
+- you can define multiple beans with @Bean annotation to create
 
 
 
