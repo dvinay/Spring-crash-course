@@ -737,3 +737,5 @@ public class Test
 ### Client and Server Communication ###
 - Synchronous -> client will request to server and wait until get response
 - ASynchronous -> client will request to server and don't wait to get response
+- for AJAX Asynchronous call using JQuery
+[ref](https://github.com/dvinay/Spring-crash-course/commit/93bfcd888fa4856adc160125db011049852986f3)
