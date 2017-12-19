@@ -739,3 +739,43 @@ public class Test
 - ASynchronous -> client will request to server and don't wait to get response
 - for AJAX Asynchronous call using JQuery
 [ref](https://github.com/dvinay/Spring-crash-course/commit/93bfcd888fa4856adc160125db011049852986f3)
+
+### Spring AOP ###
+- AOP = Aspect Oriented Programming is a process of applying the external services(transaction or logging) without modifing the exisiting code or functionality.
+- external services in aop is called Cross cutting concerns
+- AOP terms
+	- Aspect , represents external service class
+	- Advice , is a method in the Aspect class
+	- PointCut , expression which tells which all business method need advices
+		- Pointcut doesn't tell which advice method is required by a method
+	- JoinPoint , is a combination of pointcut and advice
+	- Target, is a busniess class which using Aspect
+	- Weaving is process of applying the advice to target using joinpoint
+		- weaving is done by a special program called weaver
+	- Proxy, it's a class that generate as a result of weaving process
+		- it's combination of advice and business logic(target)
+- Pointcut syntax:
+	- Access_specifier return_type package_name.class_name.method(params);
+	- we can use * - any level or .. - method parameter level
+- AOP specification has been implmeneted by several frameworks like AspectJ, Spring AOP and JBoss AOP
+- Spring AOP uses three ways to use AOP
+	- AspectJ Annotation Driven
+	- AspectJ XML Driven
+	- Classic Spring Proxy-based AOP( old approach )
+- AspectJ Annotation Driven
+	- @Aspect - to make a class as aspect
+	- we can create multiple methods as advices with following annotations
+		- @Before - before a particular business method has invoked
+		- @After - after a particular business method has invoked
+		- @AfterReturring - applies just before return particular business method, but we can access return value inside the advice
+		- @Around - both before as well as after
+		- @AfterThrowing - if our business method throws exception
+
+
+
+
+
+
+
+
+
