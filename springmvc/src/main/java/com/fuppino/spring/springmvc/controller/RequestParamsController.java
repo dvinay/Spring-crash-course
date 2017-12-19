@@ -11,7 +11,7 @@ import com.fuppino.spring.springmvc.dto.User;
 public class RequestParamsController {
 	
 	@RequestMapping("/showData")
-	public ModelAndView showData(@RequestParam("id") int id,
+	public ModelAndView showData(@RequestParam(value="id", required=false, defaultValue="0") int id,
 			@RequestParam("name") String name,
 			@RequestParam("email") String email){
 		System.out.println("Id : "+id);

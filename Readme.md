@@ -711,7 +711,7 @@ public class Test
 	- Create a controller with same URI like form in html
 	- Add @ModelAttribute("model-name") as parameter in the controller post operation method
 - request url: http://localhost:8080/springmvc/registrationPage
-Flow -> 
+- Flow -> 
 /registrationPage -> UserController, showRegistrationPage() -> display the view userreg.jsp -> form submission - Http POST method -> registerUser(@ModelAttribute("form model"))
 [ref](https://github.com/dvinay/Spring-crash-course/commit/d5fc204908b4af6a2f9f2b68c7f8eb049707083a)
 
@@ -723,7 +723,9 @@ Flow ->
 - The order of key doesn't matter
 - request url: http://localhost:8080/springmvc/showData?id=123&name=temp&email=temp@gmail.com
 [ref](https://github.com/dvinay/Spring-crash-course/commit/f61b929887b876d7684f1b364948de7978319085)
-
+- if field is not manadatory, we can add required=fasle and defaultValue
+- request url: http://localhost:8080/springmvc/showData?name=temp&email=temp
+[ref]()
 
 
 
