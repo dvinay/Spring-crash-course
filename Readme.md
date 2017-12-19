@@ -872,6 +872,8 @@ public class Test
 }
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/f97a681e5127fb38a995cc0b80850de26ec0828a)
+- by using initmethod and destroymethod as parameters in bean class, we can create a life cycle methods of bean
+    - @Bean(initMethod="init", destroyMethod="destroy")
 
 
 

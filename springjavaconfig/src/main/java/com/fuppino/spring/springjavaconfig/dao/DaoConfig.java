@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DaoConfig 
 {
-    @Bean
+    @Bean(initMethod="init", destroyMethod="destroy")
     public Dao dao() {
     	return new Dao();
     }
