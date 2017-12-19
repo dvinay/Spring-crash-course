@@ -770,9 +770,34 @@ public class Test
 		- @AfterReturring - applies just before return particular business method, but we can access return value inside the advice
 		- @Around - both before as well as after
 		- @AfterThrowing - if our business method throws exception
+- to add AOP dependecies in the pom.xml
+```XML
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-aop</artifactId>
+    <version>${springframework.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjrt</artifactId>
+    <version>1.6.11</version>
+</dependency>
+<dependency>
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjweaver</artifactId>
+    <version>1.6.11</version>
+</dependency>
+```
+- to configure the aop anotation, add aop nameschema and add aspect-autoproxy tag
+```XML
+xmlns:aop = "http://www.springframework.org/schema/aop"
+xsi:schemaLocation = http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd
 
+<aop:aspectj-autoproxy/>
 
-
+```
+-
 
 
 
