@@ -7,10 +7,10 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="user")
-public class User {
+public class User implements Comparable<User>{
 	@Id
 	@Column(name="id")
-	private int id;
+	private Integer id;
 	@Column(name="name")
 	private String name;
 	@Column(name="email")
@@ -54,5 +54,10 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", email=" + email + "]";
+	}
+
+	@Override
+	public int compareTo(User user) {
+		return this.id.compareTo(user.id);
 	}
 }

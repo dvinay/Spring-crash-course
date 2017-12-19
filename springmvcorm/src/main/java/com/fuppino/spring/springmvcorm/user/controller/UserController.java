@@ -1,5 +1,7 @@
 package com.fuppino.spring.springmvcorm.user.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -27,6 +29,13 @@ public class UserController {
 	@RequestMapping("/registerationPage")
 	public String userRegisteration() {
 		return "userreg";
+	}
+	
+	@RequestMapping("/getUsers")
+	public String getUsers(ModelMap model) {
+		List<User> users = userService.getUsers();
+		model.addAttribute("users", users);
+		return "displayuser";
 	}
 	
 	@RequestMapping(value="/registerUser", method=RequestMethod.POST)
