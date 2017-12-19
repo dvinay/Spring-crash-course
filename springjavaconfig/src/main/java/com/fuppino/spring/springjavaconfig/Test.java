@@ -12,7 +12,12 @@ public class Test
         Dao dao = config.getBean(Dao.class);
         dao.create();
         
-        Service service = config.getBean(Service.class);
-        service.save();
+        Service service1 = config.getBean(Service.class);
+        service1.save();
+        System.out.println(service1.hashCode());
+        
+        Service service2 = config.getBean(Service.class);
+        service2.save();
+        System.out.println(service2.hashCode());
     }
 }

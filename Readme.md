@@ -875,6 +875,17 @@ public class Test
 - by using initmethod and destroymethod as parameters in bean class, we can create a life cycle methods of bean
     - @Bean(initMethod="init", destroyMethod="destroy")
 [ref](https://github.com/dvinay/Spring-crash-course/commit/b404f59e678c53a40b2be6335951b9102fe43a1c)
-
+- by adding scope annotation, we can specify the scope of bean in spring configuration class file
+```JAVA
+@Configuration
+@Import(DaoConfig.class)
+public class SpringConfig {
+	@Bean
+	@Scope("prototype")
+	public Service service() {
+		return new Service();
+	}
+}
+```
 
 
