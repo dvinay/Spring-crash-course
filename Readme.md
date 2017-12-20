@@ -631,7 +631,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/tx
 	a) Front Controller
 	b) Handler Mapper
 	c) View Resolver
-- Spring MVC web application follows the followin flow
+- Spring MVC web application follows the following flow
 	1) client request comes
 	2) Dispatcher servlet handles the request
 		- it's from spring mvc framework, we use and configure it
@@ -670,7 +670,29 @@ xsi:schemaLocation="http://www.springframework.org/schema/tx
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/e660a30f36eb6d0db34fbdba7bdd49c4500a41bd#diff-69e92c6bb92c24d459319b5f291f1a13)
 
-- to configure the spring mvc xml file and view resolver; add prefix - location for the view files and sufix - extenstion of view files
+- to configure the spring mvc xml file and view resolver in dispatcher-servlet.xml; add prefix - location for the view files and sufix - extenstion of view files
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <context:component-scan base-package="com.fuppino.spring.springmvc.controller"/>
+    
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" name="viewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/views/</value>
+		</property>    
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+    </bean>	
+</beans>
+```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/c6713a74162097a2fca43aae34c5bb948a0528c8#diff-86df5f35603ce54b1e67a3ebd5df90c5)
 
 - to create controller, @Controller and @RequestMapping("url") are the important annotations. controller at class level to inform spring to create a bean and RequestMapping to map the function to corresponding url pattern
