@@ -1012,5 +1012,8 @@ public class WebServletConfiguration implements WebApplicationInitializer {
 - Spring MVC or Spring WEB supports the rest services creation
 - to create rest services, define @RestController annotation for class and @RequestMapping("/resource_name") and operations/method with correspinding annotations like @GetMapping, @PostMapping, @PuMapping and @DeleteMapping
 
+- Created a get operation for spring boot
+- http://localhost:8080/products
+
 
 
