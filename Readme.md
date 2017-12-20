@@ -3,13 +3,13 @@
  - It's a dependency Injection, Inversion of Control Desgin pattern framework
 
  - Spring framework is contains
- 	Core Container
- 		beans, core, context, SpEl
- 	Web
- 		MVC, Portlet, WebSocket, Servlet
- 	Data Access/Integration
- 		JDBC, ORM, JMS, Transaction
- 	AOP, Aspects, Instrumentation, Messaging
+ 	- Core Container
+ 		- beans, core, context, SpEl
+ 	- Web
+ 		- MVC, Portlet, WebSocket, Servlet
+ 	- Data Access/Integration
+ 		- JDBC, ORM, JMS, Transaction
+ 	- AOP, Aspects, Instrumentation, Messaging
 
  - Spring Container
  	- Spring Container is a component, which creats the object, holds the object and provide the object whenever the other object requires
