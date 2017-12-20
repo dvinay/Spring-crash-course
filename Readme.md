@@ -988,6 +988,9 @@ public class WebServletConfiguration implements WebApplicationInitializer {
 	- [ref](https://start.spring.io/)
 	- create spring boot starter in eclipse or STS
 
+- [ref](https://github.com/dvinay/Spring-crash-course/commit/dd8f3bdbccd88015947558f0c56f14c057f2d851)
+- to run this project import to eclipse and run the junit test method contextLoads(), which is available in DemoApplicationTests java file
+
 
 
 
