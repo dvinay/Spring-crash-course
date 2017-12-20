@@ -897,7 +897,32 @@ public class SpringConfig {
 		- @EnableWebMvc = mvc:annotaion-driven tag
 		- @ComponentScan = context:component-scan tag
 		- @Configuration = beans element in spring configuration xml
-
+- Steps to convert Spring xml based MVC application to java based configuration
+	- pom.xml = update with servlet dependency and war plugin
+	- replace dispatcher-servlet.xml with spring configuration class
+	- replace web.xml with java class which implements WebApplicationInitializer
+- Step 1:
+	- update servlet dependecy and maven war plugin; make sure you have set false to failOnMissingWebXml
+```XML
+<dependency>
+	<groupId>javax.servlet</groupId>
+	<artifactId>javax.servlet-api</artifactId>
+	<version>3.0.1</version>
+	<scope>provided</scope>
+</dependency>
+<build>
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-war-plugin</artifactId>
+		<version>2.4</version>
+		<configuration>
+			<warSourceDirectory>src/main/webapp</warSourceDirectory>
+			<warName>springmvcconfig</warName>
+			<failOnMissingWebXml>false</failOnMissingWebXml>
+		</configuration>
+	</plugin>
+</build>
+```
 
 
 
