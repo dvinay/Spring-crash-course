@@ -609,20 +609,20 @@ public class Test
 - Hibernate uses HibernateTransactionManager class to provide transactions, add tx:annotaion-driven in configuration and use @Transactional for the db operation
 - Note: While doing any update or create operation, use @Transactional
 ```XML
-	xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="http://www.springframework.org/schema/tx
+xmlns:tx="http://www.springframework.org/schema/tx"
+xsi:schemaLocation="http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx.xsd"
 	
-	<tx:annotation-driven/>
+<tx:annotation-driven/>
 
-	<bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" 
+<bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" 
 		name="transactionManager" p:sessionFactory-ref="sessionFactory"/>
 ```
 - for insert operation
 [ref](https://github.com/dvinay/Spring-crash-course/commit/b8294e5eac75343178725801c75228b643ad0ce5)
 - for update or delete operation
 [ref](https://github.com/dvinay/Spring-crash-course/commit/922a15180fdb1c134e259363499b8035184c34c0)
--for select one record and multiple records 
+- for select one record and multiple records 
 [ref](https://github.com/dvinay/Spring-crash-course/commit/469114e5ec835006562c7e528b020e234a90fc32)
 
 ### Spring MVC ###
