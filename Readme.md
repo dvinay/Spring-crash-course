@@ -993,6 +993,11 @@ public class WebServletConfiguration implements WebApplicationInitializer {
 
 - Spring data jpa code [ref](https://github.com/dvinay/Spring-crash-course/commit/3e5d603b08936e7e860448df611e03f08783217e)
 
+### Spring Boot Web application ###
+- we need to add spring-boot-starter-web dependency
+- Spring boot comes with embedded tomcat
+- We no need to configuration, it will import automatically
+- hit http://localhost:8080/hello?name=sample
 
 
 
