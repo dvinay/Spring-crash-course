@@ -31,7 +31,7 @@
 		- Set, Map, List, Properties
 	- Ref type Dependecies
 	- Inner bean Dependecies
-	
+
 - To create a simple spring core project, add the following dependecies to your pom.xml file
 ```xml
 <properties>
@@ -80,8 +80,7 @@
 
 - three ways to pass properties to a bean
 	- property value as values 
-		e.g:
-```xml 
+```XML 
 <bean name="employee" class="com.fuppino.spring.Employee">
 	<property name="id" value="10"></property>
 	<property name="name" value="Ram"></property>
@@ -89,7 +88,6 @@
 ```
 
 	- property value as element
-		e.g: 
 ```xml
 <bean name="employee" class="com.fuppino.spring.Employee">
 	<property name="id"> 
