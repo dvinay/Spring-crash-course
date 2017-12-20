@@ -298,7 +298,7 @@ e.g:
 		- @Qualifier
 
 - autowiring using "ByType"
-	- based on bean type, container will inject the bean automatically
+	- based on bean class type, container will inject the bean automatically
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/41fec3e3cb5bb37e370360a79f2ba86076e6cbd4)
 	- if your configuration xml contains multiple objects of same class type, then spring will generate the NoUniqueBeanDefinitionException.
 	- if spring doesn't find the proper object type, then it inject null
@@ -356,8 +356,7 @@ e.g:
 
 - autowiring using "@Qualifier"
 	- if configuration has multiple beans with same class type; spring container is not able to fetch the exact bean while autowiring configuration
-	- we can resolve this confilt or ambiguity by using @Qualifier("bean-name")
-	- [ref](https://github.com/dvinay/Spring-crash-course/commit/e42ff76d57e8941dc5a355d255d45669df810b23)
+	- we can resolve this confilt or ambiguity by using @Qualifier("bean-name")[ref](https://github.com/dvinay/Spring-crash-course/commit/e42ff76d57e8941dc5a355d255d45669df810b23)
 	- if autowired option required is true and not matched qualifier found in the container, it will genetate NoSuchBeanDefinitionException
 ```XML
 <bean name="model1" class="com.fuppino.spring.autowire.qualifier.Model" p:name="CR-V"/>
@@ -386,7 +385,7 @@ public class Car {
 ```
 
 - steps to use util
-	1) add util name space xmlns:util="http://www.springframework.org/schema/util" and "http://www.springframework.org/schema/util
+- add util name space xmlns:util="http://www.springframework.org/schema/util" and "http://www.springframework.org/schema/util
     http://www.springframework.org/schema/util/spring-util.xsd"
 ```XML
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -400,8 +399,9 @@ public class Car {
     http://www.springframework.org/schema/util/spring-util.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+</bean>
 ```
-	2) use utils tag to create a stand alone util
+- use utils tag to create a stand alone util
 ```XML
 <util:list list-class="java.util.LinkedList" id="productNames">
 	<value>IPhone</value>
@@ -409,13 +409,12 @@ public class Car {
     <value>AirPod</value>
 </util:list>
 ```
-	3) give this utils object id to ref for the bean
+- give this utils object id to ref for the bean
 ```XML
 <bean name="productList" class="com.fuppino.spring.standalone.collections.ProductList">
     <property name="productNames" ref="productNames"/>
 </bean>
 ```
-
 [ref](https://github.com/dvinay/Spring-crash-course/commit/fc207ee510817942417f91ecdd12c6c4adc5557d)
 
 ### Spring Sterotype Annotations ###
