@@ -108,20 +108,16 @@
 		- default list type is arraylist
 		- if list contains only one element, list tag will be optional
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/919466965f8f26c91a6216b59e7ce4f389cf2cfc)
-
 	2) Set
 		- default set type is LinkedHashSet
 		- if set contains only one element, set tag will be optional
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/016fb75683c0438462e9d8192cf4f5834b6ae723)
-	
 	3) Map (Key, value)
-		default set type is LinkedHashMap
-		if set contains only one element, set tag will be optional
+		- default set type is LinkedHashMap
+		- if set contains only one element, set tag will be optional
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/c19c325a4ad5b57dbd855edbfd94d7468fdabb1e)
-
 	4) Properties
-	- e.g:
-```xml
+```XML
 <bean name="employee" class="com.fuppino.spring.Employee">
 	<property name="data"> 
 		<props>
@@ -131,7 +127,7 @@
 	</property>
 </bean>
 ```
-	[ref](https://github.com/dvinay/Spring-crash-course/commit/357b6eeeb2d23ac2d3da4ef1c27e653b4a0906e3)
+[ref](https://github.com/dvinay/Spring-crash-course/commit/357b6eeeb2d23ac2d3da4ef1c27e653b4a0906e3)
 
 - Spring supports has a relationship bean dependencies with ref tag
 	e.g:
