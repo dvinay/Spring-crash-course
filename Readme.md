@@ -232,7 +232,7 @@ e.g:
 - session => one object per session
 - global session => complete application get one object based on session
 
-```xml
+```XML
 <bean name="employee" class="com.fuppino.spring.innerbean.Employee" p:name="Ram" scope="prototype">
 	<property name="address">
 		<bean class="com.fuppino.spring.innerbean.Address" p:cityName="Fremont"/>
@@ -244,15 +244,14 @@ e.g:
 ### Spring bean creation using constructor-arg ###
 
 - constructor-arg tag to initialize data
-- spring is able to call the private constructor
-
-```xml
+- spring is able to call the private constructor; it uses reflection
+```XML
 <bean name="data" class="com.fuppino.spring.constructor.Data">
 	<constructor-arg name="id" value="23"/>
 	<constructor-arg name="name" value="Sample"/>
 </bean>
 ```
-- constructor-arg also uses as element, argument or c-schema
+- constructor-arg also uses as element, argument as value or c-schema
 - for c-schema, we need to include xmlns:c="http://www.springframework.org/schema/c" into configuration file
 [ref](https://github.com/dvinay/Spring-crash-course/commit/9c92ff68f5f23661d2ba2b10c19bc9f65611aec5)
 
@@ -264,7 +263,7 @@ e.g:
 ### Spring bean creation externalization ###
 - Reading data from properties files
 - to read data from properties files, we have to add context:property-placeholder in config.xml
-```xml
+```XML
 <context:property-placeholder location="classpath:database.properties"/>
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/a0e9837c765619f05a694dbab4a54978fc1e880d)
@@ -272,8 +271,8 @@ e.g:
 
 
 ### Spring bean autowiring ###
--autowiring is a concept, where Dependency can be managed by container
--autowiring can be done, in two ways
+- autowiring is a concept, where Dependency can be managed by container
+- autowiring can be done, in two ways
 	1) XML
 		a) NO(Default)
 		b) By Type (setter injection)
