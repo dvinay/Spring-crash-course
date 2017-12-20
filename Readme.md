@@ -167,7 +167,7 @@
 	1) public void init()
 	2) public void destroy()
 
-- The flow of the life cycle is create-> set the data(setter/constructor)-> invoke init()-> read/use-> destory()-> delete
+- The flow of the life cycle is create object-> set the data(setter/constructor)-> invoke init()-> read/use-> destory()-> delete object
 
 - any initialization code, like db-connection,server connection, properties setting can go into init method
 
@@ -175,35 +175,30 @@
 	Note: to call the destroy method. you have to call registerShutdownHook() method, which is available in AbstractApplicationContext class
 	
 - Three ways to configure the lifecycle method
-	1) XML Configuration - init-method & destroy-method
+1) XML Configuration - init-method & destroy-method
 ```XML
 <bean name="item" class="com.fuppino.spring.lc.xmlconfig.Item" p:id="23" init-method="init" destroy-method="destroy"/>
 ```
-	[ref](https://github.com/dvinay/Spring-crash-course/commit/ae2d8ca26467240d9e27eb99c04f251c267fafa8)
-
-	2) implementing interfaces - InitializingBean & DisposableBean
-		- POJO class must implements InitializingBean and DisposableBean
-		- it needs to override afterPropertiesSet(), destroy()
-		- no need to specify init-method and destroy-method attributes
-		- make sure you have called registerShutdownHook() method, which is available in AbstractApplicationContext class
-	[ref](https://github.com/dvinay/Spring-crash-course/commit/3d0c984fcfedb46b61a39d49a841ee312f67c63f)
-
-	3) Annotation - @PostConstruct, @PreDestroy
-		- add @PostConstruct, @PreDestroy annotations before the init and destroy methods
-		
-		- add CommonAnnotationBeanPostProcessor bean class to config.xml , it only supports PostConstruct and PreDestroy annotations
+[ref](https://github.com/dvinay/Spring-crash-course/commit/ae2d8ca26467240d9e27eb99c04f251c267fafa8)
+2) implementing interfaces - InitializingBean & DisposableBean
+	- POJO class must implements InitializingBean and DisposableBean interfaces
+	- it needs to override afterPropertiesSet(), destroy()
+	- no need to specify init-method and destroy-method attributes in config file
+	- make sure you have called registerShutdownHook() method, which is available in AbstractApplicationContext class
+[ref](https://github.com/dvinay/Spring-crash-course/commit/3d0c984fcfedb46b61a39d49a841ee312f67c63f)
+3) Annotation - @PostConstruct, @PreDestroy
+	- add @PostConstruct, @PreDestroy annotations before the init and destroy methods
+	- add CommonAnnotationBeanPostProcessor bean class to config.xml , it only supports PostConstruct and PreDestroy annotations
 ```XML
 <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
 ```
-		[ref](https://github.com/dvinay/Spring-crash-course/commit/9b5f5b2f4eced2025479d4e9fc4829c0a179b1b2)
-		
-		(or)
-		- annotation-config support all the annotations
-		- add 
+[ref](https://github.com/dvinay/Spring-crash-course/commit/9b5f5b2f4eced2025479d4e9fc4829c0a179b1b2)
+(or)
+- annotation-config support all the annotations
 ```XML
 <context:annotation-config/>
 ```
-		[ref](https://github.com/dvinay/Spring-crash-course/commit/db20a49b702fb924bfc64376599c09adb2c0569a)
+[ref](https://github.com/dvinay/Spring-crash-course/commit/db20a49b702fb924bfc64376599c09adb2c0569a)
 
 ### Spring dependency check ###
 
