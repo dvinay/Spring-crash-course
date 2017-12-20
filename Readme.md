@@ -180,12 +180,14 @@
 <bean name="item" class="com.fuppino.spring.lc.xmlconfig.Item" p:id="23" init-method="init" destroy-method="destroy"/>
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/ae2d8ca26467240d9e27eb99c04f251c267fafa8)
+
 2) implementing interfaces - InitializingBean & DisposableBean
 	- POJO class must implements InitializingBean and DisposableBean interfaces
 	- it needs to override afterPropertiesSet(), destroy()
 	- no need to specify init-method and destroy-method attributes in config file
 	- make sure you have called registerShutdownHook() method, which is available in AbstractApplicationContext class
 [ref](https://github.com/dvinay/Spring-crash-course/commit/3d0c984fcfedb46b61a39d49a841ee312f67c63f)
+
 3) Annotation - @PostConstruct, @PreDestroy
 	- add @PostConstruct, @PreDestroy annotations before the init and destroy methods
 	- add CommonAnnotationBeanPostProcessor bean class to config.xml , it only supports PostConstruct and PreDestroy annotations
