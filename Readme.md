@@ -713,9 +713,9 @@ xsi:schemaLocation="http://www.springframework.org/schema/tx
 [ref](https://github.com/dvinay/Spring-crash-course/commit/122e9388d1178f44e17bc3581151f4a065c1642f)
 
 - request url: http://localhost:8080/springmvc/readObject
-[ref](https://github.com/dvinay/Spring-crash-course/commit/48a1985e31a1c224a9df19ffeb2c23edcc5d68ca)
+- [ref](https://github.com/dvinay/Spring-crash-course/commit/48a1985e31a1c224a9df19ffeb2c23edcc5d68ca)
 - request url: http://localhost:8080/springmvc/readList
-[ref](https://github.com/dvinay/Spring-crash-course/commit/877a8bc314ec430451064bf1567e8856f81a8bf2)
+- [ref](https://github.com/dvinay/Spring-crash-course/commit/877a8bc314ec430451064bf1567e8856f81a8bf2)
 
 ### Spring MVC -Sending data from UI to Controller ###
 - There are two ways to send data from UI to Controller,
@@ -742,20 +742,20 @@ xsi:schemaLocation="http://www.springframework.org/schema/tx
 [ref](https://github.com/dvinay/Spring-crash-course/commit/f61b929887b876d7684f1b364948de7978319085)
 - if field is not manadatory, we can add required=fasle and defaultValue
 - request url: http://localhost:8080/springmvc/showData?name=temp&email=temp
-[ref](https://github.com/dvinay/Spring-crash-course/commit/352ad25dd9b242a147c50af9ae0ec262cd384af7)
+- [ref](https://github.com/dvinay/Spring-crash-course/commit/352ad25dd9b242a147c50af9ae0ec262cd384af7)
 
 - Instead of using ModelAndView object and using, we can divide data and view. ModelMap parameter and view name as string return statement.
-[ref](https://github.com/dvinay/Spring-crash-course/commit/e6d7f763f244d6dfa4b5484bcabb64a94c937793)
+- [ref](https://github.com/dvinay/Spring-crash-course/commit/e6d7f763f244d6dfa4b5484bcabb64a94c937793)
 
 ### Spring MVC - DB Connection using ORM ###
 - request url: http://localhost:8080/springmvcorm/registerUser
-[ref](https://github.com/dvinay/Spring-crash-course/commit/2da26efa99bd7463297fce735a13785fd8633db4)
+- [ref](https://github.com/dvinay/Spring-crash-course/commit/2da26efa99bd7463297fce735a13785fd8633db4)
 
 ### Client and Server Communication ###
 - Synchronous -> client will request to server and wait until get response
 - ASynchronous -> client will request to server and don't wait to get response
 - for AJAX Asynchronous call using JQuery
-[ref](https://github.com/dvinay/Spring-crash-course/commit/93bfcd888fa4856adc160125db011049852986f3)
+- [ref](https://github.com/dvinay/Spring-crash-course/commit/93bfcd888fa4856adc160125db011049852986f3)
 
 ### Spring AOP ###
 - AOP = Aspect Oriented Programming is a process of applying the external services(transaction or logging) without modifing the exisiting code or functionality.
@@ -813,9 +813,24 @@ xsi:schemaLocation = http://www.springframework.org/schema/aop
 
 <aop:aspectj-autoproxy/>
 ```
+```JAVA
+@Aspect
+public class LogginAspect {
+	
+	@Before("execution(* com.fuppino.spring.springaop.ProductServiceImpl.multiply(..))")
+	public void logBefore(JoinPoint joinPoint) {
+		System.out.println("Before calling the method");
+	}
+
+	@After("execution(* com.fuppino.spring.springaop.ProductServiceImpl.multiply(..))")
+	public void logAfter(JoinPoint joinPoint) {
+		System.out.println("After the method invocation");
+	}
+}
+```
 - autoproxy scans the all the classes with @Aspect annotation
 - create Aspect class object in spring bean
-[ref](https://github.com/dvinay/Spring-crash-course/commit/5513054d2e28383fc1131c453e548077bb6a3fc6)
+- [ref](https://github.com/dvinay/Spring-crash-course/commit/5513054d2e28383fc1131c453e548077bb6a3fc6)
 
 ### Spring Annotation Configuration ###
 - Spring 3.0 above version supports the configuration as a class and annotation instead of xml file
