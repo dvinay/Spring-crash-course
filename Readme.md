@@ -888,4 +888,20 @@ public class SpringConfig {
 }
 ```
 
+### Spring Annotation Configuration for Web application###
+- Spring MVC web application uses descriptor file/web.xml to configure the descriptor servlet and descriptor servlet to configure the view resolver
+- If we want to implement with out xml configuration, we have to use java file 
+	- to replace web.xml, we have to create a class which extends WebApplicationInitializer from spring
+	- to replace descriptor servlet, we have to create a class like SpringConfig which extends WebMvcConfigurerAdapter from spring
+	- we have to mark the SpringConfig with following annotations
+		- @EnableWebMvc = mvc:annotaion-driven tag
+		- @ComponentScan = context:component-scan tag
+		- @Configuration = beans element in spring configuration xml
+
+
+
+
+
+
+
 
