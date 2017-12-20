@@ -504,7 +504,7 @@ public class Car {
     		p:driverClassName="com.mysql.jdbc.Driver"
     		p:url="jdbc:mysql://localhost:8889/mydb"
     		p:username="root"
-			p:password="root"/>
+    		p:password="root"/>
 <bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbcTemplate" p:dataSource-ref="dataSource"/>
 ```
 ```JAVA
