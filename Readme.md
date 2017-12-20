@@ -925,6 +925,49 @@ public class SpringConfig {
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/851bfdd19c8b31ed69746beb2e637b2ac98c82a0#diff-76a972cbe7e947b645857cea5f437d46)
 
+- Step 2:
+	- create SpringConfig java class, which extends WebMvcConfigurerAdapter
+	- add @EnableWebMvc, @ComponentScan("location"), @Configuration annotations at class level
+	- add ViewResoulver bean with @Bean annotation
+```JAVA
+@EnableWebMvc
+@ComponentScan("com.fuppino.spring.springmvc.controller")
+@Configuration
+public class SpringConfig extends WebMvcConfigurerAdapter{
+	@Bean
+	public ViewResolver viewResolver() {
+		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+		viewResolver.setPrefix("/WEB-INF/views/");
+		viewResolver.setSuffix(".jsp");
+		return viewResolver;
+	}
+	//to handle default requests
+	@Override
+	public void configureDefaultServletHandling(
+			DefaultServletHandlerConfigurer configurer) {
+		configurer.enable();
+	}
+}
+```
+- Step 3:
+	- create WebServletConfiguration java class, which implements WebApplicationInitializer
+	- override onStartup() method to provide dispatcher servlet and the url
+```JAVA
+public class WebServletConfiguration implements WebApplicationInitializer {
+
+	@Override
+	public void onStartup(ServletContext servletContext)
+			throws ServletException {
+		AnnotationConfigWebApplicationContext webContext = new AnnotationConfigWebApplicationContext();
+		webContext.register(SpringConfig.class);
+		
+		ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(webContext));
+		servlet.setLoadOnStartup(1);
+		servlet.addMapping("/");
+	}
+}
+```
+
 
 
 
