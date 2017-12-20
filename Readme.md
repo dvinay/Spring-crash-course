@@ -419,11 +419,10 @@ public class Car {
 
 ### Spring Sterotype Annotations ###
 - Sterotype Annotation @Component
-	-@Component is similar to bean tag in the configuration file
-	-spring creates a bean, using new keyword
-	e.g: Student student = new Student();
+	- @Component is similar to bean tag in the configuration file
+	- spring creates a bean, using new keyword like Student student = new Student();
 	- we can change the bean name by giving the name in @Component annotation like @Component("beanName")
-	-we have to include following line in configuration file to spring container search the classes with @Component annotation
+	- we have to include following line in configuration file to spring container search the classes with @Component annotation
 	- spring search the base package and sub package also for component
 	- Note: annotation-config is optional part
 ```XML
