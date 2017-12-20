@@ -998,6 +998,7 @@ public class WebServletConfiguration implements WebApplicationInitializer {
 - Spring boot comes with embedded tomcat
 - We no need to configuration, it will import automatically
 - hit http://localhost:8080/hello?name=sample
+- [ref](https://github.com/dvinay/Spring-crash-course/commit/168eebabe1740548073446132da2fdabcf5086de)
 
 
 
