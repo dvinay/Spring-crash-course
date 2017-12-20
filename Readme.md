@@ -981,6 +981,11 @@ public class WebServletConfiguration implements WebApplicationInitializer {
 - you can find the spring-boot-starter list here
 [ref](https://github.com/spring-projects/spring-boot)
 
+- How spring boot works
+	- spring boot works based on programming configuration, spring boot starter pom add the dependencies and configure based on META-INF/spring.factories
+	- spring.factories will decide which configuration has to enable based on condition/finds on class path
+- To create spring [ref](https://start.spring.io/)
+
 
 
 
