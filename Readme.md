@@ -1000,6 +1000,17 @@ public class WebServletConfiguration implements WebApplicationInitializer {
 - hit http://localhost:8080/hello?name=sample
 - [ref](https://github.com/dvinay/Spring-crash-course/commit/168eebabe1740548073446132da2fdabcf5086de)
 
+### REST ###
+- Http methods are basically
+	- GET - read data from server
+	- POST - create data in server
+	- PUT - update data resource in server (complete resource update)
+	- PATCH - update data resource in server (part of resouce update)
+	- DELETE - delete the resource
+	- TRACE - to provide the server packet with network path
+	- OPTION - provide what http operations does server can perform
+- Spring MVC or Spring WEB supports the rest services creation
+- to create rest services, define @RestController annotation for class and @RequestMapping("/resource_name") and operations/method with correspinding annotations like @GetMapping, @PostMapping, @PuMapping and @DeleteMapping
 
 
 
