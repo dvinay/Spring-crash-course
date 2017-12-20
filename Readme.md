@@ -86,9 +86,8 @@
 	<property name="name" value="Ram"></property>
 </bean>
 ```
-
 	- property value as element
-```xml
+```XML
 <bean name="employee" class="com.fuppino.spring.Employee">
 	<property name="id"> 
 		<value> 10 </value>
@@ -98,10 +97,9 @@
 	</property>
 </bean>
 ```
-
 	- property value with p tag
-		e.g: 
-```xml<bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
+```XML
+<bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
 ```
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/ed33a66d5c60f88620e4cd2fb42208c896856124)
 
