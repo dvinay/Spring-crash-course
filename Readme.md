@@ -79,14 +79,14 @@
 ```
 
 - three ways to pass properties to a bean
-	- property value as values 
+1) property value as values 
 ```XML 
 <bean name="employee" class="com.fuppino.spring.Employee">
 	<property name="id" value="10"></property>
 	<property name="name" value="Ram"></property>
 </bean>
 ```
-	- property value as element
+2) property value as element
 ```XML
 <bean name="employee" class="com.fuppino.spring.Employee">
 	<property name="id"> 
@@ -97,7 +97,7 @@
 	</property>
 </bean>
 ```
-	- property value with p tag
+3) property value with p tag
 ```XML
 <bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
 ```
@@ -129,16 +129,14 @@
 ```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/357b6eeeb2d23ac2d3da4ef1c27e653b4a0906e3)
 
-- Spring supports has a relationship bean dependencies with ref tag
-	e.g:
-```xml
+- Spring supports has-a relationship bean dependencies with ref tag
+```XML
 <bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 <bean name="student" class="com.fuppino.spring.reftype.Student">
 	<property name="name" value="Ram"/>
 	<property name="score" ref="scores"/>
 </bean>
 ```
-
 - for ref beans also we can use 3 types of syntax
 	1) ref as property value
 ```XML
