@@ -1,6 +1,6 @@
 ## Spring Crash Course ##
 
- - It's a dependency Injection, Inversion of Control Desgin pattern framework
+ - Spring is a dependency Injection, Inversion of Control Desgin pattern framework
 
  - Spring framework is contains
  	- Core Container
@@ -24,16 +24,14 @@
  	- Setter method Injection
  	- Constructor Injection
 
-- Spring container supports two types of Dependency Injection
- 	- Setter method Injection
- 	- Constructor Injection
-
-- Spring container supports two types of Data Dependency
+- Spring container supports four types of Data Dependency
 	- Primitive Type Dependencies
-		byte,short,int,long,float,double,char,boolean,string
+		- byte,short,int,long,float,double,char,boolean,string
 	- Collection Types Dependencies
-		Set, Map, List, Properties
-
+		- Set, Map, List, Properties
+	- Ref type Dependecies
+	- Inner bean Dependecies
+	
 - To create a simple spring core project, add the following dependecies to your pom.xml file
 ```xml
 <properties>
@@ -62,6 +60,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+
 </beans>
 ```
 
