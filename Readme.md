@@ -442,7 +442,7 @@ public class Car {
 		- primitive data => @Value()
 		[ref](https://github.com/dvinay/Spring-crash-course/commit/6db6d0e9b213dfd1c2e1499c9d93d083aac6bcae)
 		- collection data => use util give util collection id in value annotation
-			@Value(#{cllectionId})
+			@Value(#{collectionId})
 		[ref](https://github.com/dvinay/Spring-crash-course/commit/75952c5cfe1a84ab13b8a753ef27ceb8f881b7b6)
 		- Object type/ref => @Autowired
 		[ref](https://github.com/dvinay/Spring-crash-course/commit/f0bd11c628f95ee90a3a0a45ed01583b04999c60)
@@ -452,7 +452,7 @@ public class Car {
 	int data = 20; //the final value will be 10
 ```
 
-### Spring Ecpression Language ###
+### Spring Expression Language ###
 
 - Spring expression language, supports parsing and execting the expression with help of @Value annotation using # symbol
 - spring expressions are combinations of classes, methods, variable, Constructors, Objects and symblos
@@ -482,11 +482,9 @@ public class Car {
 
 ### Spring - Interface Injection ###
 - We can use runtime polymorphism by using interface object reference to child classes
-- to implement, this kind of runtime polymorphism. We need to use configuration changes only, not the code changes
-
 [ref](https://github.com/dvinay/Spring-crash-course/commit/bb31da8c68f84bc794e81894988f71a5aba73dad)
+- to implement, this kind of runtime polymorphism. We need to use configuration changes only, not the code changes
 [ref](https://github.com/dvinay/Spring-crash-course/commit/35b8d48532e63bb838d171cd490ac7a32d720f5a)
-
 - We can use same using annotation, with out touching configuration
 [ref](https://github.com/dvinay/Spring-crash-course/commit/d348c67eb120e6e379f18a9d06eccec2f172ffe4#diff-5b55836b1ed7a824c0c5ee1dd1920b6b)
 - If you implement multiple child classes for a single interface use @Qualifier("bean-name") and @Component("bean-name")
