@@ -16,7 +16,6 @@ public class ProductController {
 	ProductRepository productRepository;
 	
 	@GetMapping
-//	@Produces("application/json")
 	public Iterable<Product> getProducts() {
 		Iterable<Product> products = productRepository.findAll();
 		return products;
