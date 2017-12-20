@@ -101,17 +101,17 @@
 ```XML
 <bean name="employee3" class="com.fuppino.spring.Employee" p:id="3" p:name="name"/>
 ```
-	[ref](https://github.com/dvinay/Spring-crash-course/commit/ed33a66d5c60f88620e4cd2fb42208c896856124)
+[ref](https://github.com/dvinay/Spring-crash-course/commit/ed33a66d5c60f88620e4cd2fb42208c896856124)
 
 - Spring supports 4 types of collections as dependecies
 	1) List
-		default list type is arraylist
-		if list contains only one element, list tag will be optional
+		- default list type is arraylist
+		- if list contains only one element, list tag will be optional
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/919466965f8f26c91a6216b59e7ce4f389cf2cfc)
 
 	2) Set
-		default set type is LinkedHashSet
-		if set contains only one element, set tag will be optional
+		- default set type is LinkedHashSet
+		- if set contains only one element, set tag will be optional
 	[ref](https://github.com/dvinay/Spring-crash-course/commit/016fb75683c0438462e9d8192cf4f5834b6ae723)
 	
 	3) Map (Key, value)
