@@ -138,7 +138,7 @@
 </bean>
 ```
 - for ref beans also we can use 3 types of syntax
-	1) ref as property value
+1) ref as property value
 ```XML
 <bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 <bean name="student" class="com.fuppino.spring.reftype.Student">
@@ -146,7 +146,7 @@
 	<property name="score" ref="scores"/>
 </bean>
 ```
-	2) ref as property element
+2) ref as property element
 ```XML
 <bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 <bean name="student" class="com.fuppino.spring.reftype.Student">
@@ -156,8 +156,7 @@
 	</property>
 </bean>
 ```
-	3) ref value with p tag using object_name-ref
-
+3) ref value with p tag using object_name-ref
 ```XML
 <bean name="scores" class="com.fuppino.spring.reftype.Score" p:math="90" p:chem="89" p:scie="100"/>
 <bean name="student" class="com.fuppino.spring.reftype.Student" p:name="Ram" p:score-ref="scores"/>
