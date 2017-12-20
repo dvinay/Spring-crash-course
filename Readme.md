@@ -979,7 +979,7 @@ public class WebServletConfiguration implements WebApplicationInitializer {
 - spring boot applications uses maven dependecies starts with spring-boot-starter* like spring-boot-starter,spring-boot-starter-web, spring-boot-starter-data-jpa, spring-boot-starter-data-rest
 - internally spring-boot-starter uses BOM,which exist in pom file; which indicated what all dependecies should pull
 - you can find the spring-boot-starter list here
-(ref)[https://github.com/spring-projects/spring-boot]
+[ref](https://github.com/spring-projects/spring-boot)
 
 
 
