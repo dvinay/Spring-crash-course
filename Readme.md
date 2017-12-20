@@ -991,6 +991,7 @@ public class WebServletConfiguration implements WebApplicationInitializer {
 - [ref](https://github.com/dvinay/Spring-crash-course/commit/dd8f3bdbccd88015947558f0c56f14c057f2d851)
 - to run this project import to eclipse and run the junit test method contextLoads(), which is available in DemoApplicationTests java file
 
+- Spring data jpa code [ref](https://github.com/dvinay/Spring-crash-course/commit/3e5d603b08936e7e860448df611e03f08783217e)
 
 
 
