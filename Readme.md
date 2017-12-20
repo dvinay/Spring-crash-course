@@ -191,10 +191,10 @@
 3) Annotation - @PostConstruct, @PreDestroy
 	- add @PostConstruct, @PreDestroy annotations before the init and destroy methods
 	- add CommonAnnotationBeanPostProcessor bean class to config.xml , it only supports PostConstruct and PreDestroy annotations
+[ref](https://github.com/dvinay/Spring-crash-course/commit/9b5f5b2f4eced2025479d4e9fc4829c0a179b1b2)
 ```XML
 <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
 ```
-[ref](https://github.com/dvinay/Spring-crash-course/commit/9b5f5b2f4eced2025479d4e9fc4829c0a179b1b2)
 
 (or)
 - annotation-config support all the annotations
@@ -207,7 +207,7 @@
 
 - spring checks the dependency, while creating a bean in container
 - to check the dependency, need to add @Required before set method
-- [ref](https://github.com/dvinay/Spring-crash-course/commit/738d23a86fe78c35ff3212996967a29afcb265b0)
+[ref](https://github.com/dvinay/Spring-crash-course/commit/738d23a86fe78c35ff3212996967a29afcb265b0)
 
 ### Spring inner bean dependency creation ###
 
