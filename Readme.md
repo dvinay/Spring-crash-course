@@ -266,6 +266,20 @@ e.g:
 ```XML
 <context:property-placeholder location="classpath:database.properties"/>
 ```
+```XML
+<context:property-placeholder location="classpath:database.properties"/>
+<bean name="extern" class="com.fuppino.spring.externalization.Extern">
+ 	<constructor-arg>
+ 		<value>${dbServer}</value>
+ 	</constructor-arg>
+	<constructor-arg name="userId">
+ 		<value>${userId}</value>
+ 	</constructor-arg>
+ 	<constructor-arg name="password">
+ 		<value>${password}</value>
+ 	</constructor-arg>
+</bean>
+```
 [ref](https://github.com/dvinay/Spring-crash-course/commit/a0e9837c765619f05a694dbab4a54978fc1e880d)
 - if the property doesn't exist then BeanDefinitionStoreException occurs
 
@@ -274,14 +288,14 @@ e.g:
 - autowiring is a concept, where Dependency can be managed by container
 - autowiring can be done, in two ways
 	1) XML
-		a) NO(Default)
-		b) By Type (setter injection)
-		c) By Name (setter injection)
-		d) Auto Detect ( < spring 2.0 ) - it's outdated
-		e) By Constructor (constructor injection)
+		- NO(Default)
+		- By Type (setter injection)
+		- By Name (setter injection)
+		- Auto Detect ( < spring 2.0 ) - it's outdated
+		- By Constructor (constructor injection)
 	2) Annotation
-		a) @Autowired
-		b) @Qualifier
+		- @Autowired
+		- @Qualifier
 
 - autowiring using "ByType"
 	- based on bean type, container will inject the bean automatically
